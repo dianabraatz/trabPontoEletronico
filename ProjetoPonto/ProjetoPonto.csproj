@@ -47,6 +47,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="bdpontoDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bdpontoDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Controller\FuncionarioController.cs" />
     <Compile Include="Controller\PontoController.cs" />
     <Compile Include="DAO\FuncionarioDAO.cs" />
@@ -54,6 +59,12 @@
     <Compile Include="Model\Funcionario.cs" />
     <Compile Include="Model\Ponto.cs" />
     <Compile Include="Model\Setor.cs" />
+    <Compile Include="Relatórios\FormRelPontoFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatórios\FormRelPontoFuncionario.Designer.cs">
+      <DependentUpon>FormRelPontoFuncionario.cs</DependentUpon>
+    </Compile>
     <Compile Include="view2\AdministradorVisualizaOcorrenciasView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +131,10 @@
     <Compile Include="View\VisualizarFuncionarioView.Designer.cs">
       <DependentUpon>VisualizarFuncionarioView.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Relatórios\FormRelPontoFuncionario.resx">
+      <DependentUpon>FormRelPontoFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatórios\RelPontoFuncionario.rdlc" />
     <EmbeddedResource Include="view2\AdministradorVisualizaOcorrenciasView.resx" />
     <EmbeddedResource Include="view2\FuncionarioJustificarOcorrenciaView.resx" />
     <EmbeddedResource Include="view2\FuncionarioVisualizaOcorrencias.resx" />
@@ -158,6 +173,17 @@
     <EmbeddedResource Include="View\VisualizarFuncionarioView.resx">
       <DependentUpon>VisualizarFuncionarioView.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="bdpontoDataSet.xsc">
+      <DependentUpon>bdpontoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="bdpontoDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bdpontoDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bdpontoDataSet.xss">
+      <DependentUpon>bdpontoDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

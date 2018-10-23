@@ -52,6 +52,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>bdpontoDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Controller\Class1.cs" />
+    <Compile Include="Controller\EditarFuncionarioController.cs" />
     <Compile Include="Controller\FuncionarioController.cs" />
     <Compile Include="Controller\PontoController.cs" />
     <Compile Include="DAO\FuncionarioDAO.cs" />

@@ -269,29 +269,13 @@ namespace ProjetoPonto.Controller
                 MessageBox.Show("Selecione algum filtro.");
         }
 
-        public void PreencheCampos(EditarFuncionarioView tela, int numeroRegistro)
-        {
-            FuncionarioDAO dao = new FuncionarioDAO();
-            List<Funcionario> obj = dao.PreencheCampos(numeroRegistro);
-
-            tela.tfNome.Text = Convert.ToString(obj.ElementAt(1));
-            tela.tfCNH.Text = Convert.ToString(3);
-            tela.tfCPF.Text = Convert.ToString(2);
-            tela.tfCTPS.Text = Convert.ToString(6);
-            tela.tfDataAdmissao.Text = Convert.ToString(7);
-            tela.tfDataNascimento.Text = Convert.ToString(8);
-            tela.tfNumeroRegistro.Text = Convert.ToString(0);
-            tela.tfRG.Text = Convert.ToString(9);
-            tela.cbFuncao.SelectedIndex = Convert.ToInt32(obj.ElementAt(4));
-            tela.cbSetor.SelectedIndex = Convert.ToInt32(obj.ElementAt(5));
-
-        }
+        
 
         public static void ExcluirFuncionario(int numRegistro)
         {
             DialogResult dr = MessageBox.Show("Deseja excluir o usuário escolhido?", "Confirmação", MessageBoxButtons.YesNo);
 
-            if(dr == DialogResult.Yes)
+            if (dr == DialogResult.Yes)
             {
                 FuncionarioDAO obj = new FuncionarioDAO();
                 bool rs = obj.ExcluirFuncionario(numRegistro);
@@ -306,3 +290,5 @@ namespace ProjetoPonto.Controller
         }
     }
 }
+
+

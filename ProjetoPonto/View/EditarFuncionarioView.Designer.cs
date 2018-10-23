@@ -135,6 +135,7 @@
             this.btnEditar.TabIndex = 85;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // tfConfirmaSenha
             // 
@@ -362,6 +363,7 @@
             this.Controls.Add(this.label1);
             this.Name = "EditarFuncionarioView";
             this.Text = "EditarFuncionarioView";
+            this.Load += new System.EventHandler(this.EditarFuncionarioView_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

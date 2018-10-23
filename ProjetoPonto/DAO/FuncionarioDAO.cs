@@ -297,6 +297,42 @@ namespace ProjetoPonto.DAO
             return result;
         }
 
+        public int EditarFuncionario(Funcionario f)
+        {
+            string sql = "UPDATE funcionario SET dataNascimento = @DataNascimento, nome = @Nome, rg = @RG, cpf = @CPF, cnh = @CNH,dataAdmissao = @DataAdmissao, ctps = @CTPS, codFuncao = @CodFuncao, codSetor = @CodSetor WHERE numRegistro = @numRegistro;";
+
+            int result;
+
+            SqlConnection conn = new SqlConnection(strConnection);
+            SqlCommand sqlcmd = new SqlCommand(sql, conn);
+            sqlcmd.Parameters.AddWithValue("@numRegistro", f.GetNumeroRegistro());
+            sqlcmd.Parameters.AddWithValue("@DataNascimento", f.GetDataNascimento());
+            sqlcmd.Parameters.AddWithValue("@Nome", f.GetNome());
+            sqlcmd.Parameters.AddWithValue("@RG", f.GetRG());
+            sqlcmd.Parameters.AddWithValue("@CPF", f.GetCPF());
+            sqlcmd.Parameters.AddWithValue("@CNH", f.GetCNH());
+            sqlcmd.Parameters.AddWithValue("@DataAdmissao", f.GetDataAdmissao());
+            sqlcmd.Parameters.AddWithValue("@CTPS", f.GetCTPS());
+            sqlcmd.Parameters.AddWithValue("@CodSetor", f.GetCodSetor());
+            sqlcmd.Parameters.AddWithValue("@CodFuncao", f.GetCodFuncao());
+
+            try
+            {
+                conn.Open();
+
+                //verifica se possui algum resultado na consulta
+                result = sqlcmd.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return result;
+        }
 
     }
 }

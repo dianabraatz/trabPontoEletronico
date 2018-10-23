@@ -86,7 +86,8 @@ namespace ProjetoPonto.View
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-
+            EditarFuncionarioView obj = new EditarFuncionarioView(numeroRegistro);
+            obj.Show();
         }
 
         private void btnCadastrarFuncionario_Click(object sender, EventArgs e)
@@ -131,6 +132,8 @@ namespace ProjetoPonto.View
                 {
                     DataRowView dr = (DataRowView)tabela.Rows[linha].DataBoundItem;
                     numeroRegistro = Convert.ToInt32(dr["Numero de Registro"].ToString());
+
+                    MessageBox.Show("adm: " + numeroRegistro);
 
                     btnVisualizar.Enabled = true;
                     btnEditar.Enabled = true;

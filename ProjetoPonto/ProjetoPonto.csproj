@@ -54,6 +54,22 @@
     <Compile Include="Model\Funcionario.cs" />
     <Compile Include="Model\Ponto.cs" />
     <Compile Include="Model\Setor.cs" />
+    <Compile Include="view2\AdministradorVisualizaOcorrenciasView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view2\AdministradorVisualizaOcorrenciasView.Designer.cs" />
+    <Compile Include="view2\FuncionarioJustificarOcorrenciaView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view2\FuncionarioJustificarOcorrenciaView.Designer.cs" />
+    <Compile Include="view2\FuncionarioVisualizaOcorrencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view2\FuncionarioVisualizaOcorrencias.Designer.cs" />
+    <Compile Include="view2\SetorView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view2\SetorView.Designer.cs" />
     <Compile Include="View\CadastrarFuncionarioView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +87,12 @@
     </Compile>
     <Compile Include="View\EditarFuncionarioView.Designer.cs">
       <DependentUpon>EditarFuncionarioView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FuncaoView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FuncaoView.Designer.cs">
+      <DependentUpon>FuncaoView.cs</DependentUpon>
     </Compile>
     <Compile Include="View\HomeAdministrador.cs">
       <SubType>Form</SubType>
@@ -98,6 +120,10 @@
     <Compile Include="View\VisualizarFuncionarioView.Designer.cs">
       <DependentUpon>VisualizarFuncionarioView.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="view2\AdministradorVisualizaOcorrenciasView.resx" />
+    <EmbeddedResource Include="view2\FuncionarioJustificarOcorrenciaView.resx" />
+    <EmbeddedResource Include="view2\FuncionarioVisualizaOcorrencias.resx" />
+    <EmbeddedResource Include="view2\SetorView.resx" />
     <EmbeddedResource Include="View\CadastrarFuncionarioView.resx">
       <DependentUpon>CadastrarFuncionarioView.cs</DependentUpon>
     </EmbeddedResource>
@@ -106,6 +132,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\EditarFuncionarioView.resx">
       <DependentUpon>EditarFuncionarioView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FuncaoView.resx">
+      <DependentUpon>FuncaoView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\HomeAdministrador.resx">
       <DependentUpon>HomeAdministrador.cs</DependentUpon>

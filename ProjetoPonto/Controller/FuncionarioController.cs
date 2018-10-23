@@ -234,9 +234,8 @@ namespace ProjetoPonto.Controller
             tela.tabela.DataMember = ds.Tables[0].TableName;
         }
 
-        public void ExecutarFiltro(VisualizarFuncionarioView tela)
+        public static void ExecutarFiltro(VisualizarFuncionarioView tela)
         {
-
             string sql = "";
             string valor = tela.tfBuscar.Text;
             int filtro = tela.cbFiltro.SelectedIndex;
@@ -286,6 +285,24 @@ namespace ProjetoPonto.Controller
             tela.cbFuncao.SelectedIndex = Convert.ToInt32(obj.ElementAt(4));
             tela.cbSetor.SelectedIndex = Convert.ToInt32(obj.ElementAt(5));
 
+        }
+
+        public static void ExcluirFuncionario(int numRegistro)
+        {
+            DialogResult dr = MessageBox.Show("Deseja excluir o usuário escolhido?", "Confirmação", MessageBoxButtons.YesNo);
+
+            if(dr == DialogResult.Yes)
+            {
+                FuncionarioDAO obj = new FuncionarioDAO();
+                bool rs = obj.ExcluirFuncionario(numRegistro);
+
+                if (rs)
+                {
+                    MessageBox.Show("O usuário foi excluido com sucesso.");
+                }
+                else
+                    MessageBox.Show("Houve um erro na exclusão do usuário.");
+            }
         }
     }
 }

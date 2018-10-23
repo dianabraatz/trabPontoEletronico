@@ -264,8 +264,40 @@ namespace ProjetoPonto.DAO
                 conn.Close();
             }
             return lista;
-
         }
+
+        public Boolean ExcluirFuncionario(int numeroRegistro)
+        {
+            string sql = "delete from funcionario where numRegistro = @registro";
+            bool result = false;
+
+            SqlConnection conn = new SqlConnection(strConnection);
+            SqlCommand sqlcmd = new SqlCommand(sql, conn);
+            List<Funcionario> lista = new List<Funcionario>();
+
+            sqlcmd.Parameters.AddWithValue("@registro", numeroRegistro);
+
+            try
+            {
+                conn.Open();
+                SqlDataReader rows = sqlcmd.ExecuteReader();
+
+                //verifica se possui algum resultado na consulta
+                result = rows.Read();
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return result;
+        }
+
+
     }
 }
 

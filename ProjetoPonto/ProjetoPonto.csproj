@@ -52,6 +52,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>bdpontoDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Controller\AdmVisualizarOcorrenciaController.cs" />
     <Compile Include="Controller\EditarFuncionarioController.cs" />
     <Compile Include="Controller\FuncionarioController.cs" />
     <Compile Include="Controller\OcorrenciasController.cs" />
@@ -147,6 +148,12 @@
     <Compile Include="View\PontoAdministradorView.Designer.cs">
       <DependentUpon>PontoAdministradorView.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\ValidarJustificativaPontoView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ValidarJustificativaPontoView.Designer.cs">
+      <DependentUpon>ValidarJustificativaPontoView.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\VisualizarFuncionarioView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -200,6 +207,9 @@
     </Compile>
     <EmbeddedResource Include="View\PontoAdministradorView.resx">
       <DependentUpon>PontoAdministradorView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ValidarJustificativaPontoView.resx">
+      <DependentUpon>ValidarJustificativaPontoView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\VisualizarFuncionarioView.resx">
       <DependentUpon>VisualizarFuncionarioView.cs</DependentUpon>

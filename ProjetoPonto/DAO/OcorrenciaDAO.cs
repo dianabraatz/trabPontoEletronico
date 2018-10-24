@@ -99,5 +99,101 @@ namespace Coprel.DAO
             }
             return dt;
         }
+
+        public DataSet PreencheTabelaAdm()
+        {
+            string sql = "select o.codOcorrencia as 'Código da Ocorrencia', f.numRegistro as 'Numero de Registro', f.nome as 'Nome do Funcionário', s.descricao as 'Descricao do Status', p.codPonto as 'Código', CONVERT(date, p.dh_ponto1) as 'Data', o.justificativa as 'Justificativa' " +
+                         "FROM funcionario f " +
+                            "INNER JOIN ponto p ON(f.numRegistro = p.numRegistro) " +
+                            "INNER JOIN ocorrencia o ON(p.codPonto = o.codPonto) " +
+                            "INNER JOIN statusOcorrencia s ON(o.status = s.idStatus) " +
+                         "WHERE o.status != 2; ";
+
+            SqlConnection conn = new SqlConnection(strConnection);
+            SqlCommand sqlcmd = new SqlCommand(sql, conn);
+
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            adapter.SelectCommand = sqlcmd;
+            DataSet dataSet = new DataSet();
+
+            try
+            {
+                conn.Open();    //abre a conexao com o banco
+                adapter.Fill(dataSet);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return dataSet;
+        }
+
+        public IList<Ocorrencia> PreencherCampos(int codigoOcorrencia)
+        {
+            string sql = "SELECT * FROM ocorrencia WHERE codOcorrencia = @codigoOcorrencia";
+
+
+            SqlConnection conn = new SqlConnection(strConnection);
+            SqlCommand sqlcmd = new SqlCommand(sql, conn);
+            List<Ocorrencia> lista = new List<Ocorrencia>();
+
+            sqlcmd.Parameters.AddWithValue("@codigoOcorrencia", codigoOcorrencia);
+
+            try
+            {
+                conn.Open();
+                SqlDataReader result = sqlcmd.ExecuteReader();
+
+                while (result.Read())
+                {
+                    Ocorrencia o = new Ocorrencia();
+                    o.SetCodOcorrencia(Convert.ToInt32(result["codOcorrencia"]));
+                    o.SetCodPonto(Convert.ToInt32(result["codPonto"]));
+                    o.SetJustificativa(Convert.ToString(result["justificativa"]));
+                    o.SetStatus(Convert.ToInt32(result["status"]));
+                    lista.Add(o);
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return lista;
+        }
+
+        public int EditarOcorrencia(Ocorrencia o)
+        {
+            string sql = "UPDATE ocorrencia SET status = @status WHERE [codOcorrencia ] = @codOcorrencia;";
+            int result = 0;
+
+            SqlConnection conn = new SqlConnection(strConnection);
+            SqlCommand sqlcmd = new SqlCommand(sql, conn);
+            sqlcmd.Parameters.AddWithValue("@status", o.GetStatus());
+            sqlcmd.Parameters.AddWithValue("@codOcorrencia", o.GetCodOcorrencia());
+
+            try
+            {
+                conn.Open();
+                //verifica se possui algum resultado na consulta
+                result = sqlcmd.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return result;
+        }
     }
 }

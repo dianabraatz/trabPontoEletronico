@@ -29,9 +29,14 @@ namespace ProjetoPonto.Controller
             if (result)
             {
                 VerificaNivelAcesso(f);
+                tela.Hide();
             }
             else
+            {
                 MessageBox.Show("Erro ao efetuar login");
+                tela.Show();
+            }
+
         }
 
         public void VerificaNivelAcesso(Funcionario f)

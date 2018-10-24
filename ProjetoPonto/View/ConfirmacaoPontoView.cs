@@ -46,6 +46,7 @@ namespace ProjetoPonto.View
         {
             FunOcorrenciaView obj = new FunOcorrenciaView(numReg, res);
             obj.Show();
+            this.Hide();
         }
     }
 }

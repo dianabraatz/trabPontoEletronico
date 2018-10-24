@@ -58,7 +58,6 @@ namespace Coprel.View
                     data = Convert.ToString(dr["data"].ToString());
 
                     btnJustificar.Enabled = true;
-                    MessageBox.Show("" + codigo + "," + data);
                 }
                 else
                     btnJustificar.Enabled = false;

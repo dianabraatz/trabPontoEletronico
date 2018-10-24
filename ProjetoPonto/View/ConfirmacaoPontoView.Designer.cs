@@ -40,10 +40,10 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(246, 201);
+            this.button1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(215, 286);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(93, 33);
+            this.button1.Size = new System.Drawing.Size(124, 38);
             this.button1.TabIndex = 11;
             this.button1.Text = "Confirma";
             this.button1.UseVisualStyleBackColor = true;
@@ -51,12 +51,11 @@
             // 
             // nome
             // 
-            this.nome.AutoSize = true;
-            this.nome.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nome.Location = new System.Drawing.Point(28, 76);
+            this.nome.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nome.Location = new System.Drawing.Point(108, 106);
             this.nome.Name = "nome";
             this.nome.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.nome.Size = new System.Drawing.Size(217, 20);
+            this.nome.Size = new System.Drawing.Size(200, 20);
             this.nome.TabIndex = 10;
             this.nome.Text = "NOME DO FUNCIONARIO";
             this.nome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -66,11 +65,10 @@
             this.numRegistro.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.numRegistro.AutoSize = true;
-            this.numRegistro.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numRegistro.Location = new System.Drawing.Point(63, 111);
+            this.numRegistro.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numRegistro.Location = new System.Drawing.Point(111, 132);
             this.numRegistro.Name = "numRegistro";
-            this.numRegistro.Size = new System.Drawing.Size(142, 20);
+            this.numRegistro.Size = new System.Drawing.Size(197, 18);
             this.numRegistro.TabIndex = 9;
             this.numRegistro.Text = "NUM REGISTRO";
             this.numRegistro.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -80,10 +78,10 @@
             this.data.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.data.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.data.Location = new System.Drawing.Point(103, 152);
+            this.data.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.data.Location = new System.Drawing.Point(108, 181);
             this.data.Name = "data";
-            this.data.Size = new System.Drawing.Size(120, 115);
+            this.data.Size = new System.Drawing.Size(200, 18);
             this.data.TabIndex = 13;
             this.data.Text = "DATA";
             this.data.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -93,18 +91,18 @@
             this.hora.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.hora.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hora.Location = new System.Drawing.Point(229, 135);
+            this.hora.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hora.Location = new System.Drawing.Point(108, 157);
             this.hora.Name = "hora";
-            this.hora.Size = new System.Drawing.Size(135, 63);
+            this.hora.Size = new System.Drawing.Size(200, 18);
             this.hora.TabIndex = 12;
             this.hora.Text = "HORARIO";
             this.hora.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnOcorrencias
             // 
-            this.btnOcorrencias.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOcorrencias.Location = new System.Drawing.Point(67, 259);
+            this.btnOcorrencias.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOcorrencias.Location = new System.Drawing.Point(72, 286);
             this.btnOcorrencias.Name = "btnOcorrencias";
             this.btnOcorrencias.Size = new System.Drawing.Size(120, 38);
             this.btnOcorrencias.TabIndex = 14;
@@ -135,10 +133,10 @@
             this.Controls.Add(this.nome);
             this.Controls.Add(this.numRegistro);
             this.Name = "ConfirmacaoPontoView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DCPoint - Confirmação do Ponto";
             this.Load += new System.EventHandler(this.ConfirmacaoPontoView_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

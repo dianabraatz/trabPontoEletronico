@@ -37,7 +37,7 @@
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(31, 236);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(230, 35);
@@ -48,7 +48,7 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(354, 236);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(230, 35);
@@ -60,13 +60,13 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Century", 20.25F, System.Drawing.FontStyle.Bold);
+            this.label14.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label14.Location = new System.Drawing.Point(165, 114);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(304, 33);
+            this.label14.Size = new System.Drawing.Size(330, 32);
             this.label14.TabIndex = 69;
-            this.label14.Text = "Ponto Administrador";
+            this.label14.Text = "Ponto de Administrador";
             // 
             // label9
             // 
@@ -88,6 +88,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "PontoAdministradorView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DCPoint - Ponto Administrador";
             this.Load += new System.EventHandler(this.PontoAdministradorView_Load);
             this.ResumeLayout(false);

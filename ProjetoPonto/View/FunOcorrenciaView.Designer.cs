@@ -47,16 +47,16 @@
             this.tabela.Location = new System.Drawing.Point(27, 206);
             this.tabela.Name = "tabela";
             this.tabela.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.tabela.Size = new System.Drawing.Size(675, 234);
+            this.tabela.Size = new System.Drawing.Size(675, 224);
             this.tabela.TabIndex = 0;
             this.tabela.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.tabela_CellMouseClick);
             // 
             // btnJustificar
             // 
-            this.btnJustificar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnJustificar.Location = new System.Drawing.Point(610, 446);
+            this.btnJustificar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnJustificar.Location = new System.Drawing.Point(596, 436);
             this.btnJustificar.Name = "btnJustificar";
-            this.btnJustificar.Size = new System.Drawing.Size(92, 30);
+            this.btnJustificar.Size = new System.Drawing.Size(106, 40);
             this.btnJustificar.TabIndex = 1;
             this.btnJustificar.Text = "Justificar";
             this.btnJustificar.UseVisualStyleBackColor = true;
@@ -65,51 +65,51 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(23, 149);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 20);
+            this.label1.Size = new System.Drawing.Size(155, 20);
             this.label1.TabIndex = 3;
             this.label1.Text = "Numero de Registro:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(23, 168);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 20);
+            this.label2.Size = new System.Drawing.Size(55, 20);
             this.label2.TabIndex = 4;
             this.label2.Text = "Nome:";
             // 
             // lbNome
             // 
             this.lbNome.AutoSize = true;
-            this.lbNome.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbNome.Location = new System.Drawing.Point(292, 168);
             this.lbNome.Name = "lbNome";
-            this.lbNome.Size = new System.Drawing.Size(56, 20);
+            this.lbNome.Size = new System.Drawing.Size(55, 20);
             this.lbNome.TabIndex = 6;
             this.lbNome.Text = "Nome:";
             // 
             // lbNumero
             // 
             this.lbNumero.AutoSize = true;
-            this.lbNumero.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbNumero.Location = new System.Drawing.Point(292, 149);
             this.lbNumero.Name = "lbNumero";
-            this.lbNumero.Size = new System.Drawing.Size(160, 20);
+            this.lbNumero.Size = new System.Drawing.Size(155, 20);
             this.lbNumero.TabIndex = 5;
             this.lbNumero.Text = "Numero de Registro:";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Century", 20.25F, System.Drawing.FontStyle.Bold);
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
             this.label14.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label14.Location = new System.Drawing.Point(275, 91);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(177, 33);
+            this.label14.Size = new System.Drawing.Size(172, 31);
             this.label14.TabIndex = 69;
             this.label14.Text = "Ocorrências";
             // 
@@ -137,6 +137,7 @@
             this.Controls.Add(this.btnJustificar);
             this.Controls.Add(this.tabela);
             this.Name = "FunOcorrenciaView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DCPoint - Ocorrências";
             this.Load += new System.EventHandler(this.FunOcorrenciaView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tabela)).EndInit();

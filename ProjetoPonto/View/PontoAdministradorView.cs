@@ -31,11 +31,13 @@ namespace ProjetoPonto.View
         {
             HomeAdministrador obj = new HomeAdministrador();
             obj.Show();
+            this.Dispose();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             PontoController.ExecutaPonto(numRegistro);
+            this.Dispose();
         }
 
     }

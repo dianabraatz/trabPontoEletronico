@@ -35,5 +35,10 @@ namespace ProjetoPonto.View
             AdmVisualizarOcorrenciasView obj = new AdmVisualizarOcorrenciasView();
             obj.Show();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

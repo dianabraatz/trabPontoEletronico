@@ -47,7 +47,7 @@
             // 
             // btnExcluir
             // 
-            this.btnExcluir.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcluir.Location = new System.Drawing.Point(779, 599);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(147, 37);
@@ -100,7 +100,7 @@
             // 
             // btnCancela
             // 
-            this.btnCancela.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancela.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancela.Location = new System.Drawing.Point(359, 155);
             this.btnCancela.Name = "btnCancela";
             this.btnCancela.Size = new System.Drawing.Size(75, 25);
@@ -111,7 +111,7 @@
             // 
             // btnFiltrar
             // 
-            this.btnFiltrar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFiltrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFiltrar.Location = new System.Drawing.Point(278, 155);
             this.btnFiltrar.Name = "btnFiltrar";
             this.btnFiltrar.Size = new System.Drawing.Size(75, 25);
@@ -122,10 +122,10 @@
             // 
             // tfBuscar
             // 
-            this.tfBuscar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tfBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tfBuscar.Location = new System.Drawing.Point(172, 155);
             this.tfBuscar.Name = "tfBuscar";
-            this.tfBuscar.Size = new System.Drawing.Size(100, 27);
+            this.tfBuscar.Size = new System.Drawing.Size(100, 26);
             this.tfBuscar.TabIndex = 18;
             this.tfBuscar.Text = "Buscar";
             this.tfBuscar.TextChanged += new System.EventHandler(this.tfBuscar_TextChanged);
@@ -133,7 +133,7 @@
             // cbFiltro
             // 
             this.cbFiltro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbFiltro.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbFiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbFiltro.FormattingEnabled = true;
             this.cbFiltro.Location = new System.Drawing.Point(29, 154);
             this.cbFiltro.Name = "cbFiltro";
@@ -143,7 +143,7 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.Location = new System.Drawing.Point(932, 599);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(147, 37);
@@ -154,7 +154,7 @@
             // 
             // btnCadastrarFuncionario
             // 
-            this.btnCadastrarFuncionario.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrarFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrarFuncionario.Location = new System.Drawing.Point(1085, 599);
             this.btnCadastrarFuncionario.Name = "btnCadastrarFuncionario";
             this.btnCadastrarFuncionario.Size = new System.Drawing.Size(147, 37);
@@ -165,7 +165,7 @@
             // 
             // btnVisualizar
             // 
-            this.btnVisualizar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVisualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVisualizar.Location = new System.Drawing.Point(1085, 150);
             this.btnVisualizar.Name = "btnVisualizar";
             this.btnVisualizar.Size = new System.Drawing.Size(147, 28);
@@ -177,11 +177,11 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Century", 20.25F, System.Drawing.FontStyle.Bold);
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
             this.label14.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label14.Location = new System.Drawing.Point(407, 84);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(451, 33);
+            this.label14.Size = new System.Drawing.Size(428, 31);
             this.label14.TabIndex = 71;
             this.label14.Text = "Gerenciamento de Funcionários";
             // 
@@ -212,6 +212,7 @@
             this.Controls.Add(this.btnCadastrarFuncionario);
             this.Controls.Add(this.btnVisualizar);
             this.Name = "VisualizarFuncionarioView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DCPoint - Gerenciamento de Funcionários";
             this.Load += new System.EventHandler(this.VisualizarFuncionarioView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tabela)).EndInit();

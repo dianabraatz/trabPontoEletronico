@@ -41,10 +41,10 @@
             // btnLogin
             // 
             this.btnLogin.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btnLogin.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(163, 285);
+            this.btnLogin.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.Location = new System.Drawing.Point(152, 295);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(94, 35);
+            this.btnLogin.Size = new System.Drawing.Size(116, 35);
             this.btnLogin.TabIndex = 11;
             this.btnLogin.Text = "Entrar";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -52,20 +52,21 @@
             // 
             // tfSenha
             // 
-            this.tfSenha.Font = new System.Drawing.Font("Century", 14F);
-            this.tfSenha.Location = new System.Drawing.Point(94, 234);
+            this.tfSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tfSenha.Location = new System.Drawing.Point(94, 250);
             this.tfSenha.Name = "tfSenha";
-            this.tfSenha.Size = new System.Drawing.Size(237, 30);
+            this.tfSenha.PasswordChar = '*';
+            this.tfSenha.Size = new System.Drawing.Size(237, 27);
             this.tfSenha.TabIndex = 10;
             this.tfSenha.TextChanged += new System.EventHandler(this.tfSenha_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(88, 95);
+            this.label3.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(73, 110);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 33);
+            this.label3.Size = new System.Drawing.Size(81, 32);
             this.label3.TabIndex = 9;
             this.label3.Text = "Login";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -73,10 +74,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century", 14F);
-            this.label2.Location = new System.Drawing.Point(90, 211);
+            this.label2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(90, 223);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 23);
+            this.label2.Size = new System.Drawing.Size(64, 22);
             this.label2.TabIndex = 8;
             this.label2.Text = "Senha";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -84,10 +85,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century", 14F);
-            this.label1.Location = new System.Drawing.Point(90, 147);
+            this.label1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(90, 159);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(187, 23);
+            this.label1.Size = new System.Drawing.Size(181, 22);
             this.label1.TabIndex = 7;
             this.label1.Text = "Número de Registro";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -95,11 +96,11 @@
             // tfNumeroRegistro
             // 
             this.tfNumeroRegistro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tfNumeroRegistro.Font = new System.Drawing.Font("Century", 14F);
+            this.tfNumeroRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tfNumeroRegistro.ForeColor = System.Drawing.Color.Black;
-            this.tfNumeroRegistro.Location = new System.Drawing.Point(94, 170);
+            this.tfNumeroRegistro.Location = new System.Drawing.Point(94, 186);
             this.tfNumeroRegistro.Name = "tfNumeroRegistro";
-            this.tfNumeroRegistro.Size = new System.Drawing.Size(237, 30);
+            this.tfNumeroRegistro.Size = new System.Drawing.Size(237, 27);
             this.tfNumeroRegistro.TabIndex = 6;
             this.tfNumeroRegistro.TextChanged += new System.EventHandler(this.tfNumeroRegistro_TextChanged);
             // 
@@ -116,7 +117,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(411, 381);
+            this.ClientSize = new System.Drawing.Size(411, 437);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.tfSenha);
@@ -125,6 +126,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tfNumeroRegistro);
             this.Name = "LoginView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DCPoint";
             this.Load += new System.EventHandler(this.LoginView_Load);
             this.ResumeLayout(false);

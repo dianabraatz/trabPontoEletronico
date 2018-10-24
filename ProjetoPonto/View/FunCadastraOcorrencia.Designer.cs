@@ -49,7 +49,7 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(439, 436);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(102, 28);
@@ -60,87 +60,88 @@
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(244, 436);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(102, 28);
             this.button2.TabIndex = 2;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(63, 262);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 20);
+            this.label1.Size = new System.Drawing.Size(95, 20);
             this.label1.TabIndex = 3;
             this.label1.Text = "Justificativa:";
             // 
             // tfData
             // 
             this.tfData.Enabled = false;
-            this.tfData.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tfData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tfData.Location = new System.Drawing.Point(244, 226);
             this.tfData.MaxLength = 10;
             this.tfData.Name = "tfData";
-            this.tfData.Size = new System.Drawing.Size(297, 27);
+            this.tfData.Size = new System.Drawing.Size(297, 26);
             this.tfData.TabIndex = 4;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(12, 143);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(108, 20);
+            this.label2.Size = new System.Drawing.Size(110, 20);
             this.label2.TabIndex = 5;
             this.label2.Text = "Logado como:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(63, 189);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(132, 20);
+            this.label3.Size = new System.Drawing.Size(131, 20);
             this.label3.TabIndex = 6;
             this.label3.Text = "Codigo do Ponto:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(63, 392);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(167, 20);
+            this.label4.Size = new System.Drawing.Size(163, 20);
             this.label4.TabIndex = 7;
             this.label4.Text = "Status da Ocorrência:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(63, 226);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(155, 20);
+            this.label5.Size = new System.Drawing.Size(151, 20);
             this.label5.TabIndex = 8;
             this.label5.Text = "Data da Ocorrência:";
             // 
             // tfCod
             // 
             this.tfCod.Enabled = false;
-            this.tfCod.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tfCod.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tfCod.Location = new System.Drawing.Point(244, 189);
             this.tfCod.Name = "tfCod";
-            this.tfCod.Size = new System.Drawing.Size(297, 27);
+            this.tfCod.Size = new System.Drawing.Size(297, 26);
             this.tfCod.TabIndex = 9;
             // 
             // tfJustificativa
             // 
             this.tfJustificativa.Enabled = false;
-            this.tfJustificativa.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tfJustificativa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tfJustificativa.Location = new System.Drawing.Point(244, 301);
             this.tfJustificativa.Multiline = true;
             this.tfJustificativa.Name = "tfJustificativa";
@@ -150,10 +151,10 @@
             // checkOutras
             // 
             this.checkOutras.AutoSize = true;
-            this.checkOutras.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkOutras.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkOutras.Location = new System.Drawing.Point(473, 266);
             this.checkOutras.Name = "checkOutras";
-            this.checkOutras.Size = new System.Drawing.Size(72, 24);
+            this.checkOutras.Size = new System.Drawing.Size(68, 24);
             this.checkOutras.TabIndex = 12;
             this.checkOutras.Text = "Outra";
             this.checkOutras.UseVisualStyleBackColor = true;
@@ -162,7 +163,7 @@
             // cbJustificativa
             // 
             this.cbJustificativa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbJustificativa.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbJustificativa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbJustificativa.Location = new System.Drawing.Point(244, 262);
             this.cbJustificativa.Name = "cbJustificativa";
             this.cbJustificativa.Size = new System.Drawing.Size(223, 28);
@@ -171,7 +172,7 @@
             // cbStatus
             // 
             this.cbStatus.Enabled = false;
-            this.cbStatus.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbStatus.FormattingEnabled = true;
             this.cbStatus.Location = new System.Drawing.Point(244, 392);
             this.cbStatus.Name = "cbStatus";
@@ -181,7 +182,7 @@
             // lbNome
             // 
             this.lbNome.AutoSize = true;
-            this.lbNome.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbNome.Location = new System.Drawing.Point(126, 143);
             this.lbNome.Name = "lbNome";
             this.lbNome.Size = new System.Drawing.Size(49, 20);
@@ -191,10 +192,10 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Century", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(149, 95);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(304, 33);
+            this.label14.Size = new System.Drawing.Size(284, 31);
             this.label14.TabIndex = 67;
             this.label14.Text = "Justificar Ocorrência";
             // 
@@ -230,6 +231,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "FunCadastraOcorrencia";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DCPoint - Justifica ocorrência";
             this.Load += new System.EventHandler(this.FunCadastraOcorrencia_Load);
             this.ResumeLayout(false);

@@ -22,5 +22,10 @@ namespace ProjetoPonto.View
             VisualizarFuncionarioView obj = new VisualizarFuncionarioView();
             obj.Show();
         }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

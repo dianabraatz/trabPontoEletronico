@@ -134,7 +134,7 @@ namespace Coprel.DAO
 
         public IList<Ocorrencia> PreencherCampos(int codigoOcorrencia)
         {
-            string sql = "SELECT * FROM ocorrencia WHERE codOcorrencia = @codigoOcorrencia";
+            string sql = "SELECT codOcorrencia, codPonto, status, justificativa FROM ocorrencia WHERE codOcorrencia = @codigoOcorrencia";
 
 
             SqlConnection conn = new SqlConnection(strConnection);
@@ -194,6 +194,73 @@ namespace Coprel.DAO
                 conn.Close();
             }
             return result;
+        }
+
+        public DataSet FiltraNome(string nome)
+        {
+            string sql = "select o.codOcorrencia as 'Código da Ocorrencia', f.numRegistro as 'Numero de Registro', f.nome as 'Nome do Funcionário', s.descricao as 'Descricao do Status', p.codPonto as 'Código', CONVERT(date, p.dh_ponto1) as 'Data', o.justificativa as 'Justificativa' " +
+                         "FROM funcionario f " +
+                            "INNER JOIN ponto p ON(f.numRegistro = p.numRegistro) " +
+                            "INNER JOIN ocorrencia o ON(p.codPonto = o.codPonto) " +
+                            "INNER JOIN statusOcorrencia s ON(o.status = s.idStatus) " +
+                         "WHERE f.nome LIKE @nome ORDER BY s.descricao ASC";
+
+            SqlConnection conn = new SqlConnection(strConnection);
+            SqlCommand sqlcmd = new SqlCommand(sql, conn);
+
+            sqlcmd.Parameters.AddWithValue("@nome", "%" + nome + "%");
+
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            adapter.SelectCommand = sqlcmd;
+
+            DataSet dataSet = new DataSet();
+
+            try
+            {
+                conn.Open();
+                adapter.Fill(dataSet);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return dataSet;
+        }
+
+        public DataSet PreencheTabelaTodos()
+        {
+            string sql = "select o.codOcorrencia as 'Código da Ocorrencia', f.numRegistro as 'Numero de Registro', f.nome as 'Nome do Funcionário', s.descricao as 'Descricao do Status', p.codPonto as 'Código', CONVERT(date, p.dh_ponto1) as 'Data', o.justificativa as 'Justificativa' " +
+                         "FROM funcionario f " +
+                            "INNER JOIN ponto p ON(f.numRegistro = p.numRegistro) " +
+                            "INNER JOIN ocorrencia o ON(p.codPonto = o.codPonto) " +
+                            "INNER JOIN statusOcorrencia s ON(o.status = s.idStatus) " +
+                         "ORDER BY s.descricao ASC";
+
+            SqlConnection conn = new SqlConnection(strConnection);
+            SqlCommand sqlcmd = new SqlCommand(sql, conn);
+
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            adapter.SelectCommand = sqlcmd;
+            DataSet dataSet = new DataSet();
+
+            try
+            {
+                conn.Open();    //abre a conexao com o banco
+                adapter.Fill(dataSet);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return dataSet;
         }
     }
 }

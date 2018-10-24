@@ -17,6 +17,13 @@ namespace Coprel.View
         public AdmVisualizarOcorrenciasView()
         {
             InitializeComponent();
+            label5.Text = "";
+            label6.Text = "";
+            label7.Text = "";
+            btnJustificar.Enabled = false;
+            cbTodos.Checked = false;
+
+            AdmVisualizarOcorrenciaController.PreencheTabela(this);
 
         }
 
@@ -55,6 +62,38 @@ namespace Coprel.View
                 else
                     btnJustificar.Enabled = false;
             }
+        }
+
+        private void btnJustificar_Click(object sender, EventArgs e)
+        {
+            ValidarJustificativaPontoView obj = new ValidarJustificativaPontoView(codigoOcorrencia);
+            obj.Show();
+        }
+
+        private void btnFiltrar_Click(object sender, EventArgs e)
+        {
+            string nome = tfBuscar.Text;
+            AdmVisualizarOcorrenciaController.FiltraFuncionario(this, nome);
+        }
+
+        private void btnCancela_Click(object sender, EventArgs e)
+        {
+            AdmVisualizarOcorrenciaController.PreencheTabela(this);
+        }
+
+        private void tfBuscar_MouseClick(object sender, MouseEventArgs e)
+        {
+            tfBuscar.Text = "";
+        }
+
+        private void cbTodos_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbTodos.Checked == true)
+            {
+                AdmVisualizarOcorrenciaController.PreencheTabelaTodos(this);
+            }
+            else
+                AdmVisualizarOcorrenciaController.PreencheTabela(this);
         }
     }
 }

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Coprel.View;
+using ProjetoPonto.View;
 
 namespace ProjetoPonto.View
 {
@@ -26,6 +28,12 @@ namespace ProjetoPonto.View
         private void label9_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            AdmVisualizarOcorrenciasView obj = new AdmVisualizarOcorrenciasView();
+            obj.Show();
         }
     }
 }

@@ -59,5 +59,10 @@ namespace Coprel.View
         {
 
         }
+
+        private void btnJustificar_Click(object sender, EventArgs e)
+        {
+            AdmVisualizarOcorrenciaController.EditarOcorrencia(this);
+        }
     }
 }

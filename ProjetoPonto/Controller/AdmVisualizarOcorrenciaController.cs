@@ -58,19 +58,33 @@ namespace Coprel.Controller
             o.SetJustificativa(Justificativa);
             o.SetStatus(status);
 
-            MessageBox.Show("" + status);
-
             OcorrenciaDAO obj = new OcorrenciaDAO();
             int rs = obj.EditarOcorrencia(o);
 
             if (rs == 1)
             {
-                MessageBox.Show("A ocorrencia de código " + o.GetCodOcorrencia() + " foi alterada com sucesso.");
+                MessageBox.Show("A ocorrencia foi alterada com sucesso.");
+
             }
             else
                 MessageBox.Show("Houve algum erro ao justificar a ocorrencia.");
         }
 
-    }
+        public static void FiltraFuncionario(AdmVisualizarOcorrenciasView tela, string nome)
+        {
+            OcorrenciaDAO obj = new OcorrenciaDAO();
+            DataSet ds = obj.FiltraNome(nome);
+            tela.tabela.DataSource = ds;
+            tela.tabela.DataMember = ds.Tables[0].TableName;
+        }
+
+        public static void PreencheTabelaTodos(AdmVisualizarOcorrenciasView tela)
+        {
+            OcorrenciaDAO dao = new OcorrenciaDAO();
+            DataSet ds = dao.PreencheTabelaTodos();
+            tela.tabela.DataSource = ds;
+            tela.tabela.DataMember = ds.Tables[0].TableName;
+        }
+
     }
 }

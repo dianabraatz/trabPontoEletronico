@@ -11,6 +11,7 @@ namespace Coprel.Controller
 {
     class EditarFuncionarioController
     {
+        //string str;
 
         public static void PreencheCBFuncao(EditarFuncionarioView tela)
         {
@@ -52,6 +53,8 @@ namespace Coprel.Controller
 
         public void EditaFuncionario(EditarFuncionarioView tela)
         {
+            //System.Data.SqlClient.SqlException: 'The parameterized query '(@numRegistro int, @senha nvarchar(4000), @DataNascimento datetime' expects the parameter '@senha', which was not supplied.'
+
             Funcionario f = new Funcionario();
             f.SetNumeroRegistro(Convert.ToInt32(tela.tfNumeroRegistro.Text));
             f.SetNome(tela.tfNome.Text);

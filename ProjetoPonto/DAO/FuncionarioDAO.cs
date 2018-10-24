@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using ProjetoPonto.Model;
 
 namespace ProjetoPonto.DAO
@@ -251,6 +252,7 @@ namespace ProjetoPonto.DAO
                     f.SetDataAdmissao(Convert.ToDateTime(result["dataAdmissao"]));
                     f.SetDataNascimento(Convert.ToDateTime(result["dataNascimento"]));
                     f.SetRG(Convert.ToString(result["rg"]));
+                    f.SetSenha(Convert.ToString(result["senha"]));
 
                     lista.Add(f);
                 }
@@ -301,7 +303,7 @@ namespace ProjetoPonto.DAO
         {
             string sql = "UPDATE funcionario SET dataNascimento = @DataNascimento, nome = @Nome, rg = @RG, cpf = @CPF, cnh = @CNH,dataAdmissao = @DataAdmissao, ctps = @CTPS, codFuncao = @CodFuncao, codSetor = @CodSetor WHERE numRegistro = @numRegistro;";
 
-            int result;
+            int result = 0;
 
             SqlConnection conn = new SqlConnection(strConnection);
             SqlCommand sqlcmd = new SqlCommand(sql, conn);
@@ -323,9 +325,9 @@ namespace ProjetoPonto.DAO
                 //verifica se possui algum resultado na consulta
                 result = sqlcmd.ExecuteNonQuery();
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw;
+                MessageBox.Show(""+ e.Message);
             }
             finally
             {

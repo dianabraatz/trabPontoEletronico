@@ -64,16 +64,30 @@ namespace ProjetoPonto.Controller
 
         }
 
-        public static void ConfirmaPonto(int numRegistro, ConfirmacaoPontoView tela)
+        public static string ConfirmaPonto(int numRegistro, ConfirmacaoPontoView tela)
         {
             PontoDAO obj = new PontoDAO();
             List<String> resultado = obj.ConfirmaPonto(numRegistro);
 
+            string res = resultado[2];
             tela.nome.Text = resultado[2];
             tela.data.Text = resultado[0];
             tela.hora.Text = resultado[1];
             tela.numRegistro.Text = resultado[3];
+            return res;
+        }
 
+        public static void VerificaPontosLogin(ConfirmacaoPontoView tela, int numeroRegistro)
+        {
+            PontoDAO dao = new PontoDAO();
+            bool rs = dao.VerificaPontoLargada(numeroRegistro);
+
+            if (rs)
+            {
+                tela.btnOcorrencias.Visible = true;
+            }
+            else
+                tela.btnOcorrencias.Visible = false;
         }
     }
 }

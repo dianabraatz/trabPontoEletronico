@@ -134,6 +134,34 @@ namespace ProjetoPonto.DAO
             }
             return lista;
         }
+
+        public bool VerificaPontoLargada(int numeroRegistro)
+        {
+            bool result;
+            string sql = "select * from ponto WHERE numRegistro = @numRegistro AND (CONVERT(date, dh_ponto1) != CONVERT(date, CURRENT_TIMESTAMP)) AND (dh_ponto1 is null or dh_ponto2 is null or dh_ponto3 is null or dh_ponto4 is null)";
+
+            SqlConnection conn = new SqlConnection(strConnection);
+            SqlCommand sqlcmd = new SqlCommand(sql, conn);
+            sqlcmd.Parameters.AddWithValue("@numRegistro", numeroRegistro);
+
+            try
+            {
+                conn.Open();
+                SqlDataReader rows = sqlcmd.ExecuteReader();
+
+                //verifica se possui algum resultado na consulta
+                result = rows.Read();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return result;
+        }
     }
 }
 

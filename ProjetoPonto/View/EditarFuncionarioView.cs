@@ -15,6 +15,7 @@ namespace ProjetoPonto.View
     public partial class EditarFuncionarioView : Form
     {
         int numeroRegistro;
+
         public EditarFuncionarioView(int numero)
         {
             InitializeComponent();

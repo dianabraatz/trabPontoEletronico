@@ -33,6 +33,7 @@
             this.numRegistro = new System.Windows.Forms.Label();
             this.data = new System.Windows.Forms.Label();
             this.hora = new System.Windows.Forms.Label();
+            this.btnOcorrencias = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -100,12 +101,23 @@
             this.hora.Text = "HORARIO";
             this.hora.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btnOcorrencias
+            // 
+            this.btnOcorrencias.Location = new System.Drawing.Point(97, 201);
+            this.btnOcorrencias.Name = "btnOcorrencias";
+            this.btnOcorrencias.Size = new System.Drawing.Size(75, 23);
+            this.btnOcorrencias.TabIndex = 14;
+            this.btnOcorrencias.Text = "Ocorrencias";
+            this.btnOcorrencias.UseVisualStyleBackColor = true;
+            this.btnOcorrencias.Click += new System.EventHandler(this.btnOcorrencias_Click);
+            // 
             // ConfirmacaoPontoView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(354, 259);
+            this.Controls.Add(this.btnOcorrencias);
             this.Controls.Add(this.data);
             this.Controls.Add(this.hora);
             this.Controls.Add(this.button1);
@@ -125,5 +137,6 @@
         public System.Windows.Forms.Label data;
         public System.Windows.Forms.Label hora;
         public System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Button btnOcorrencias;
     }
 }

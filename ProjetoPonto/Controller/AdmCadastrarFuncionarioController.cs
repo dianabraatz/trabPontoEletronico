@@ -11,50 +11,8 @@ using System.Data;
 
 namespace ProjetoPonto.Controller
 {
-    class FuncionarioController
+    class AdmCadastrarFuncionarioController
     {
-        public void VerificaUsuario(LoginView tela)
-        {
-
-            int numRegistro = Convert.ToInt32(tela.tfNumeroRegistro.Text);
-            string senha = tela.tfSenha.Text;
-
-            Funcionario f = new Funcionario();
-            f.SetNumeroRegistro(numRegistro);
-            f.SetSenha(senha);
-
-            FuncionarioDAO obj = new FuncionarioDAO();
-            bool result = obj.verificaLogin(f);
-
-            if (result)
-            {
-                VerificaNivelAcesso(f);
-                tela.Hide();
-            }
-            else
-            {
-                MessageBox.Show("Erro ao efetuar login");
-                tela.Show();
-            }
-
-        }
-
-        public void VerificaNivelAcesso(Funcionario f)
-        {
-            FuncionarioDAO obj = new FuncionarioDAO();
-            int nivelAcesso = obj.VerificaNivelAcesso(f);
-
-            if (nivelAcesso == 1)
-            {
-                PontoAdministradorView telaAdmin = new PontoAdministradorView(f.GetNumeroRegistro());
-                telaAdmin.Show();
-            }
-            else
-            {
-                PontoController.ExecutaPonto(f.GetNumeroRegistro());
-            }
-        }
-
         public static void PreencheCBFuncao(CadastrarFuncionarioView tela)
         {
             DataTable data = FuncionarioDAO.PreencheCBFuncao();
@@ -229,69 +187,6 @@ namespace ProjetoPonto.Controller
 
             tela.tfConfirmaSenha.Enabled = false;
             tela.btnCadastrar.Enabled = false;
-
-        }
-
-        public static void PreencherTabela(VisualizarFuncionarioView tela)
-        {
-            DataSet ds = FuncionarioDAO.PreencheTabela();
-            tela.tabela.DataSource = ds;
-            tela.tabela.DataMember = ds.Tables[0].TableName;
-        }
-
-        public static void ExecutarFiltro(VisualizarFuncionarioView tela)
-        {
-            string sql = "";
-            string valor = tela.tfBuscar.Text;
-            int filtro = tela.cbFiltro.SelectedIndex;
-
-            if (filtro != 0)
-            {
-                if (!String.IsNullOrEmpty(valor))
-                {
-                    //DataSet ds;
-                    switch (filtro)
-                    {
-                        case 1:
-                            sql = "SELECT f.numRegistro as 'Numero de Registro', f.nome as 'Nome do Funcionario', s.nome as Setor, fu.nome as Função, f.cpf as CPF, f.dataNascimento AS 'Data de Nascimento' " +
-                             "FROM funcionario f JOIN setor s ON f.codSetor = s.codSetor JOIN funcao fu ON f.codFuncao = fu.codFuncao WHERE f.nome LIKE @valor";
-                            break;
-                        case 2:
-                            sql = "SELECT f.numRegistro as 'Numero de Registro', f.nome as 'Nome do Funcionario', s.nome as Setor, fu.nome as Função, f.cpf as CPF, f.dataNascimento AS 'Data de Nascimento' " +
-                             "FROM funcionario f JOIN setor s ON f.codSetor = s.codSetor JOIN funcao fu ON f.codFuncao = fu.codFuncao WHERE s.nome LIKE @valor";
-                            break;
-                        case 3:
-                            sql = "SELECT f.numRegistro as 'Numero de Registro', f.nome as 'Nome do Funcionario', s.nome as Setor, fu.nome as Função, f.cpf as CPF, f.dataNascimento AS 'Data de Nascimento' " +
-                              "FROM funcionario f JOIN setor s ON f.codSetor = s.codSetor JOIN funcao fu ON f.codFuncao = fu.codFuncao WHERE fu.nome LIKE @valor";
-                            break;
-                    }
-                    DataSet ds = FuncionarioDAO.ExecutaFiltro(sql, valor);
-                    tela.tabela.DataSource = ds;
-                    tela.tabela.DataMember = ds.Tables[0].TableName;
-                }
-            }
-            else
-                MessageBox.Show("Selecione algum filtro.");
-        }
-
-        
-
-        public static void ExcluirFuncionario(int numRegistro)
-        {
-            DialogResult dr = MessageBox.Show("Deseja excluir o usuário escolhido?", "Confirmação", MessageBoxButtons.YesNo);
-
-            if (dr == DialogResult.Yes)
-            {
-                FuncionarioDAO obj = new FuncionarioDAO();
-                bool rs = obj.ExcluirFuncionario(numRegistro);
-
-                if (rs)
-                {
-                    MessageBox.Show("O usuário foi excluido com sucesso.");
-                }
-                else
-                    MessageBox.Show("Houve um erro na exclusão do usuário.");
-            }
         }
     }
 }

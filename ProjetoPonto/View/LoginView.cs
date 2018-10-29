@@ -7,7 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Coprel.Controller;
 using ProjetoPonto.Controller;
+
 
 namespace ProjetoPonto
 {
@@ -20,7 +22,7 @@ namespace ProjetoPonto
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            FuncionarioController obj = new FuncionarioController();
+            LoginController obj = new LoginController();
             obj.VerificaUsuario(this);
 
         }

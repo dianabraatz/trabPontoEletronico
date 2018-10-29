@@ -172,6 +172,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "ValidarJustificativaPontoView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ValidarJustificativaPontoView";
             this.Load += new System.EventHandler(this.ValidarJustificativaPontoView_Load);
             this.panel1.ResumeLayout(false);

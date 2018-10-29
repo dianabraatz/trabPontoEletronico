@@ -16,8 +16,8 @@ namespace ProjetoPonto.View
         public CadastrarFuncionarioView()
         {
             InitializeComponent();
-            FuncionarioController.PreencheCBFuncao(this);
-            FuncionarioController.PreencheCBSetor(this);
+            AdmCadastrarFuncionarioController.PreencheCBFuncao(this);
+            AdmCadastrarFuncionarioController.PreencheCBSetor(this);
 
             tfNumeroRegistro.Select();
             tfConfirmaSenha.Enabled = false;
@@ -26,15 +26,8 @@ namespace ProjetoPonto.View
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            FuncionarioController f = new FuncionarioController();
+            AdmCadastrarFuncionarioController f = new AdmCadastrarFuncionarioController();
             f.CadastrarFuncionario(this);
-        }
-
-        private void CadastrarFuncionarioView_Load(object sender, EventArgs e)
-        {
-            //teste
-            //teste
-
         }
 
         private void tfSenha_Leave(object sender, EventArgs e)
@@ -46,16 +39,6 @@ namespace ProjetoPonto.View
             }
             else
                 tfConfirmaSenha.Enabled = false;
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label16_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

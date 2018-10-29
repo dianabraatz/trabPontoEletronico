@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Coprel.Controller;
 using ProjetoPonto.Controller;
 
 namespace ProjetoPonto.View
@@ -18,7 +19,7 @@ namespace ProjetoPonto.View
         public VisualizarFuncionarioView()
         {
             InitializeComponent();
-            FuncionarioController.PreencherTabela(this);
+            AdmVisualizarFuncionarioController.PreencherTabela(this);
             PreencheCBFiltro();
 
             cbFiltro.SelectedIndex = 0;
@@ -49,19 +50,19 @@ namespace ProjetoPonto.View
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            FuncionarioController.ExcluirFuncionario(numeroRegistro);
+            AdmVisualizarFuncionarioController.ExcluirFuncionario(numeroRegistro);
         }
 
         private void btnCancela_Click(object sender, EventArgs e)
         {
-            FuncionarioController.PreencherTabela(this);
+            AdmVisualizarFuncionarioController.PreencherTabela(this);
             tfBuscar.Text = "";
             cbFiltro.SelectedIndex = 0;
         }
 
         private void btnFiltrar_Click(object sender, EventArgs e)
         {
-            FuncionarioController.ExecutarFiltro(this);
+            AdmVisualizarFuncionarioController.ExecutarFiltro(this);
         }
 
         private void tfBuscar_TextChanged(object sender, EventArgs e)

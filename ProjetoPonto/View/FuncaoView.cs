@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Coprel.Controller;
 
 namespace Coprel.View
 {
@@ -15,11 +16,81 @@ namespace Coprel.View
         public FuncaoView()
         {
             InitializeComponent();
+            FuncaoController.PreencherTabela(this);
+            FuncaoController.DesabilitarItens(this);
+            FuncaoController.PreencherCBNivelAcesso(this);
+
         }
 
         private void FuncaoView_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void tabela_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            int linha = -1;
+
+            if (tabela.SelectedRows.Count > 0)
+            {
+                linha = tabela.SelectedRows[0].Index;
+            }
+            else
+            {
+                if (tabela.SelectedCells.Count > 0)
+                {
+                    linha = tabela.SelectedCells[0].RowIndex;
+                }
+            }
+
+            if (linha != -1)
+            {
+                if (tabela.Rows[linha].DataBoundItem != null) //verifica se a linha da tabela está vazia
+                {
+                    DataRowView dr = (DataRowView)tabela.Rows[linha].DataBoundItem;
+                    tbID.Text = Convert.ToString(dr["Código"].ToString());
+                    tbDescricao.Text = Convert.ToString(dr["Descrição"].ToString());
+                    cbNivelAcesso.SelectedValue = Convert.ToInt32(dr["Nível de Acesso"].ToString());
+
+                    btnCadastrar.Enabled = false;
+                    cbEditar.Visible = true;
+                }
+                else
+                {
+                }
+
+            }
+        }
+
+        private void tabela_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void cbEditar_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbEditar.Checked == true)
+            {
+                cbNivelAcesso.Enabled = true;
+                tbDescricao.Enabled = true;
+
+                btnEditar.Visible = true;
+                btnLimpar.Enabled = true;
+                btnExcluir.Visible = true;
+            }
+            else
+                FuncaoController.DesabilitarItens(this);
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            tbDescricao.Text = "";
+            tbID.Text = "";
+            cbNivelAcesso.SelectedValue = 0;
+
+            btnEditar.Visible = false;
+            btnExcluir.Visible = false;
+            btnCadastrar.Enabled = true;
         }
     }
 }

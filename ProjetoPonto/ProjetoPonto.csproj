@@ -55,10 +55,12 @@
     <Compile Include="Controller\AdmVisualizarOcorrenciaController.cs" />
     <Compile Include="Controller\EditarFuncionarioController.cs" />
     <Compile Include="Controller\AdmCadastrarFuncionarioController.cs" />
+    <Compile Include="Controller\FuncaoController.cs" />
     <Compile Include="Controller\LoginController.cs" />
     <Compile Include="Controller\OcorrenciasController.cs" />
     <Compile Include="Controller\PontoController.cs" />
     <Compile Include="Controller\AdmVisualizarFuncionarioController.cs" />
+    <Compile Include="DAO\FuncaoDAO.cs" />
     <Compile Include="DAO\FuncionarioDAO.cs" />
     <Compile Include="DAO\OcorrenciaDAO.cs" />
     <Compile Include="DAO\PontoDAO.cs" />

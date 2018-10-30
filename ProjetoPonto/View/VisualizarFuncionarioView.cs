@@ -134,8 +134,6 @@ namespace ProjetoPonto.View
                     DataRowView dr = (DataRowView)tabela.Rows[linha].DataBoundItem;
                     numeroRegistro = Convert.ToInt32(dr["Numero de Registro"].ToString());
 
-                    MessageBox.Show("adm: " + numeroRegistro);
-
                     btnVisualizar.Enabled = true;
                     btnEditar.Enabled = true;
                     btnExcluir.Enabled = true;

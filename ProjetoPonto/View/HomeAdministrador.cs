@@ -25,20 +25,16 @@ namespace ProjetoPonto.View
             obj.Show();
         }
 
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
+        private void btnOcorrencias_Click(object sender, EventArgs e)
         {
             AdmVisualizarOcorrenciasView obj = new AdmVisualizarOcorrenciasView();
             obj.Show();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void btnFuncao_Click(object sender, EventArgs e)
         {
-
+            FuncaoView obj = new FuncaoView();
+            obj.Show();
         }
     }
 }

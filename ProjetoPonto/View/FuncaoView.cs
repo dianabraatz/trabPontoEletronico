@@ -71,6 +71,13 @@ namespace Coprel.View
         {
             if (cbEditar.Checked == true)
             {
+                if (tbDescricao.Text == String.Empty || tbID.Text == String.Empty)
+                {
+                    btnCadastrar.Enabled = false;
+                }
+                else
+                    btnCadastrar.Enabled = true;
+
                 cbNivelAcesso.Enabled = true;
                 tbDescricao.Enabled = true;
 

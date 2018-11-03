@@ -36,5 +36,11 @@ namespace ProjetoPonto.View
             FuncaoView obj = new FuncaoView();
             obj.Show();
         }
+
+        private void btnSetor_Click(object sender, EventArgs e)
+        {
+            SetorView obj = new SetorView();
+            obj.Show();
+        }
     }
 }

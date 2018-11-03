@@ -60,10 +60,12 @@
     <Compile Include="Controller\OcorrenciasController.cs" />
     <Compile Include="Controller\PontoController.cs" />
     <Compile Include="Controller\AdmVisualizarFuncionarioController.cs" />
+    <Compile Include="Controller\SetorController.cs" />
     <Compile Include="DAO\FuncaoDAO.cs" />
     <Compile Include="DAO\FuncionarioDAO.cs" />
     <Compile Include="DAO\OcorrenciaDAO.cs" />
     <Compile Include="DAO\PontoDAO.cs" />
+    <Compile Include="DAO\SetorDAO.cs" />
     <Compile Include="Model\Funcao.cs" />
     <Compile Include="Model\Funcionario.cs" />
     <Compile Include="Model\Ocorrencia.cs" />
@@ -75,22 +77,6 @@
     <Compile Include="Relatórios\FormRelPontoFuncionario.Designer.cs">
       <DependentUpon>FormRelPontoFuncionario.cs</DependentUpon>
     </Compile>
-    <Compile Include="view2\AdministradorVisualizaOcorrenciasView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="view2\AdministradorVisualizaOcorrenciasView.Designer.cs" />
-    <Compile Include="view2\FuncionarioJustificarOcorrenciaView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="view2\FuncionarioJustificarOcorrenciaView.Designer.cs" />
-    <Compile Include="view2\FuncionarioVisualizaOcorrencias.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="view2\FuncionarioVisualizaOcorrencias.Designer.cs" />
-    <Compile Include="view2\SetorView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="view2\SetorView.Designer.cs" />
     <Compile Include="View\AdmVisualizarOcorrenciasView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +139,12 @@
     <Compile Include="View\PontoAdministradorView.Designer.cs">
       <DependentUpon>PontoAdministradorView.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\SetorView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SetorView.Designer.cs">
+      <DependentUpon>SetorView.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\ValidarJustificativaPontoView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,10 +161,6 @@
       <DependentUpon>FormRelPontoFuncionario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Relatórios\RelPontoFuncionario.rdlc" />
-    <EmbeddedResource Include="view2\AdministradorVisualizaOcorrenciasView.resx" />
-    <EmbeddedResource Include="view2\FuncionarioJustificarOcorrenciaView.resx" />
-    <EmbeddedResource Include="view2\FuncionarioVisualizaOcorrencias.resx" />
-    <EmbeddedResource Include="view2\SetorView.resx" />
     <EmbeddedResource Include="View\AdmVisualizarOcorrenciasView.resx">
       <DependentUpon>AdmVisualizarOcorrenciasView.cs</DependentUpon>
     </EmbeddedResource>
@@ -212,6 +200,9 @@
     </Compile>
     <EmbeddedResource Include="View\PontoAdministradorView.resx">
       <DependentUpon>PontoAdministradorView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SetorView.resx">
+      <DependentUpon>SetorView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\ValidarJustificativaPontoView.resx">
       <DependentUpon>ValidarJustificativaPontoView.cs</DependentUpon>

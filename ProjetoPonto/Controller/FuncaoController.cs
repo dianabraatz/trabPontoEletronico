@@ -13,6 +13,7 @@ namespace Coprel.Controller
 {
     class FuncaoController
     {
+
         public static void PreencherTabela(FuncaoView tela)
         {
             DataSet ds = FuncaoDAO.PreencheTabela();

@@ -36,13 +36,13 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.tbID = new System.Windows.Forms.TextBox();
             this.tbDescricao = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.cbEditar = new System.Windows.Forms.CheckBox();
             this.cbNivelAcesso = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.tabela)).BeginInit();
             this.SuspendLayout();
             // 
@@ -114,32 +114,22 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(114, 154);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(143, 20);
+            this.label2.Size = new System.Drawing.Size(142, 18);
             this.label2.TabIndex = 11;
             this.label2.Text = "Código da Função:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(173, 185);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 20);
+            this.label3.Size = new System.Drawing.Size(84, 18);
             this.label3.TabIndex = 12;
             this.label3.Text = "Descrição:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(132, 217);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(125, 20);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "Nível de Acesso:";
             // 
             // tbID
             // 
@@ -160,11 +150,11 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
+            this.label14.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label14.Location = new System.Drawing.Point(82, 108);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(372, 31);
+            this.label14.Size = new System.Drawing.Size(377, 32);
             this.label14.TabIndex = 67;
             this.label14.Text = "Gerenciamento de Funções";
             // 
@@ -199,6 +189,16 @@
             this.cbNivelAcesso.Name = "cbNivelAcesso";
             this.cbNivelAcesso.Size = new System.Drawing.Size(180, 26);
             this.cbNivelAcesso.TabIndex = 69;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(132, 217);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(123, 18);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "Nível de Acesso:";
             // 
             // FuncaoView
             // 
@@ -238,12 +238,12 @@
         public System.Windows.Forms.Button btnExcluir;
         public System.Windows.Forms.Button btnLimpar;
         public System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.Label label4;
         public System.Windows.Forms.TextBox tbID;
         public System.Windows.Forms.TextBox tbDescricao;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label9;
         public System.Windows.Forms.CheckBox cbEditar;
         public System.Windows.Forms.ComboBox cbNivelAcesso;
+        private System.Windows.Forms.Label label4;
     }
 }

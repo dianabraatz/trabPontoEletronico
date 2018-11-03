@@ -79,6 +79,7 @@
             this.btnSetor.TabIndex = 6;
             this.btnSetor.Text = "Setor";
             this.btnSetor.UseVisualStyleBackColor = true;
+            this.btnSetor.Click += new System.EventHandler(this.btnSetor_Click);
             // 
             // btnRelatorio
             // 

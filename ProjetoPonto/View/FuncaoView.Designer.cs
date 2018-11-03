@@ -138,6 +138,7 @@
             this.tbID.Name = "tbID";
             this.tbID.Size = new System.Drawing.Size(180, 26);
             this.tbID.TabIndex = 14;
+            this.tbID.TextChanged += new System.EventHandler(this.tbID_TextChanged);
             // 
             // tbDescricao
             // 
@@ -146,6 +147,7 @@
             this.tbDescricao.Name = "tbDescricao";
             this.tbDescricao.Size = new System.Drawing.Size(180, 26);
             this.tbDescricao.TabIndex = 16;
+            this.tbDescricao.TextChanged += new System.EventHandler(this.tbDescricao_TextChanged);
             // 
             // label14
             // 

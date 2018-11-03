@@ -20,6 +20,10 @@ namespace Coprel.View
             tbCodigo.Enabled = false;
             tbNome.Enabled = false;
 
+            btnEditar.Enabled = false;
+            btnExcluir.Enabled = false;
+            btnCadastrar.Enabled = false;
+
             SetorController.PreencherTabela(this);
         }
 
@@ -91,7 +95,6 @@ namespace Coprel.View
             {
                 tbNome.Enabled = false;
             }
-
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)

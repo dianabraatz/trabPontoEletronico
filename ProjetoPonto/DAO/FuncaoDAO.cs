@@ -43,7 +43,7 @@ namespace Coprel.DAO
 
         public static DataTable PreencheCBNivelAcesso()
         {
-            string sql = "SELECT nivelAcesso FROM funcao ORDER BY nivelAcesso ASC;";
+            string sql = "SELECT DISTINCT nivelAcesso FROM funcao ORDER BY nivelAcesso ASC;";
 
             SqlConnection conn = new SqlConnection(strConnection);
             SqlCommand sqlcmd = new SqlCommand(sql, conn);

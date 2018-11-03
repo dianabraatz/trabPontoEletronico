@@ -16,8 +16,16 @@ namespace Coprel.View
         public FuncaoView()
         {
             InitializeComponent();
+
+            tbID.Enabled = false;
+            tbDescricao.Enabled = false;
+            cbNivelAcesso.Enabled = false;
+
+            btnCadastrar.Enabled = false;
+            btnEditar.Enabled = false;
+            btnExcluir.Enabled = false;
+                       
             FuncaoController.PreencherTabela(this);
-            FuncaoController.DesabilitarItens(this);
             FuncaoController.PreencherCBNivelAcesso(this);
 
         }
@@ -52,12 +60,7 @@ namespace Coprel.View
                     tbDescricao.Text = Convert.ToString(dr["Descrição"].ToString());
                     cbNivelAcesso.SelectedValue = Convert.ToInt32(dr["Nível de Acesso"].ToString());
 
-                    cbEditar.Visible = true;
                 }
-                else
-                {
-                }
-
             }
         }
 
@@ -68,35 +71,21 @@ namespace Coprel.View
 
         private void cbEditar_CheckedChanged(object sender, EventArgs e)
         {
-            if (cbEditar.Checked == true)
+            if (cbEditar.Checked)
             {
-                if (tbDescricao.Text == String.Empty || tbID.Text == String.Empty)
-                {
-                    btnCadastrar.Enabled = false;
-                }
-                else
-                    btnCadastrar.Enabled = true;
-
-                cbNivelAcesso.Enabled = true;
                 tbDescricao.Enabled = true;
-
-                btnEditar.Visible = true;
-                btnLimpar.Enabled = true;
-                btnExcluir.Visible = true;
+                cbNivelAcesso.Enabled = true;
             }
             else
-                FuncaoController.DesabilitarItens(this);
+            {
+                tbDescricao.Enabled = false;
+                cbNivelAcesso.Enabled = false;
+            }
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
-            tbDescricao.Text = "";
-            tbID.Text = "";
-            cbNivelAcesso.SelectedValue = 0;
-
-            btnEditar.Visible = false;
-            btnExcluir.Visible = false;
-            btnCadastrar.Enabled = true;
+            FuncaoController.LimparCampos(this);
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
@@ -122,6 +111,16 @@ namespace Coprel.View
             {
                 FuncaoController.EditarFuncao(this);
             }
+        }
+
+        private void tbID_TextChanged(object sender, EventArgs e)
+        {
+            FuncaoController.HabilitarBotoes(this);
+        }
+
+        private void tbDescricao_TextChanged(object sender, EventArgs e)
+        {
+            FuncaoController.HabilitarBotoes(this);
         }
     }
 }

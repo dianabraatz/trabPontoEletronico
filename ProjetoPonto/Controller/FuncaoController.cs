@@ -21,16 +21,6 @@ namespace Coprel.Controller
             tela.tabela.DataMember = ds.Tables[0].TableName;
         }
 
-        public static void DesabilitarItens(FuncaoView tela)
-        {
-            tela.tbID.Enabled = false;
-            tela.tbDescricao.Enabled = false;
-            tela.cbNivelAcesso.Enabled = false;
-
-            tela.btnEditar.Visible = false;
-            tela.btnExcluir.Visible = false;
-        }
-
         public static void PreencherCBNivelAcesso(FuncaoView tela)
         {
             DataTable data = FuncaoDAO.PreencheCBNivelAcesso();
@@ -56,7 +46,8 @@ namespace Coprel.Controller
             {
                 MessageBox.Show("Item inserido com sucesso.");
                 PreencherTabela(tela);
-            } else
+            }
+            else
                 MessageBox.Show("Houve algum erro ao cadastrar a função, tente novamente.");
         }
 
@@ -100,6 +91,41 @@ namespace Coprel.Controller
             }
             else
                 MessageBox.Show("Houve um erro ao efetuar a edição.");
+        }
+
+        public static void LimparCampos(FuncaoView tela)
+        {
+            tela.tbDescricao.Text = "";
+            tela.tbID.Text = "";
+            tela.cbNivelAcesso.SelectedValue = 0;
+
+            tela.btnCadastrar.Enabled = false;
+            tela.btnEditar.Enabled = false;
+            tela.btnExcluir.Enabled = false;
+        }
+
+        public static void HabilitarBotoes(FuncaoView tela)
+        {
+            if ((tela.tbID.Text != String.Empty) && (tela.tbDescricao.Text != String.Empty))
+            {
+                tela.btnCadastrar.Enabled = false;
+                tela.btnEditar.Enabled = true;
+                tela.btnExcluir.Enabled = true;
+
+            }
+            else if ((tela.tbID.Text == String.Empty) && (tela.tbDescricao.Text != String.Empty))
+            {
+                tela.btnCadastrar.Enabled = true;
+                tela.btnEditar.Enabled = false;
+                tela.btnExcluir.Enabled = false;
+
+            }
+            else if ((tela.tbID.Text == String.Empty) && (tela.tbDescricao.Text != String.Empty))
+            {
+                tela.btnCadastrar.Enabled = false;
+                tela.btnEditar.Enabled = false;
+                tela.btnExcluir.Enabled = false;
+            }
         }
     }
 }

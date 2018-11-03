@@ -64,6 +64,7 @@
     <Compile Include="DAO\FuncionarioDAO.cs" />
     <Compile Include="DAO\OcorrenciaDAO.cs" />
     <Compile Include="DAO\PontoDAO.cs" />
+    <Compile Include="Model\Funcao.cs" />
     <Compile Include="Model\Funcionario.cs" />
     <Compile Include="Model\Ocorrencia.cs" />
     <Compile Include="Model\Ponto.cs" />

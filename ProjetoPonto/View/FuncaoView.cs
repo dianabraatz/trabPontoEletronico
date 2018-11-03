@@ -52,7 +52,6 @@ namespace Coprel.View
                     tbDescricao.Text = Convert.ToString(dr["Descrição"].ToString());
                     cbNivelAcesso.SelectedValue = Convert.ToInt32(dr["Nível de Acesso"].ToString());
 
-                    btnCadastrar.Enabled = false;
                     cbEditar.Visible = true;
                 }
                 else
@@ -98,6 +97,31 @@ namespace Coprel.View
             btnEditar.Visible = false;
             btnExcluir.Visible = false;
             btnCadastrar.Enabled = true;
+        }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            FuncaoController.CadastrarFuncao(this);
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("Deseja continuar com a exclusão?", "Confirmar", MessageBoxButtons.YesNo);
+
+            if (dr == DialogResult.Yes)
+            {
+                FuncaoController.ExcluirFuncao(this);
+            }
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("Deseja continuar com a edição?", "Confirmar", MessageBoxButtons.YesNo);
+
+            if (dr == DialogResult.Yes)
+            {
+                FuncaoController.EditarFuncao(this);
+            }
         }
     }
 }

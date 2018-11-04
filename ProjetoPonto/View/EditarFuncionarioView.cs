@@ -21,6 +21,7 @@ namespace ProjetoPonto.View
             InitializeComponent();
             numeroRegistro = numero;
 
+            EditarFuncionarioController.InicializaCompontentes(this);
             EditarFuncionarioController.PreencheCBFuncao(this);
             EditarFuncionarioController.PreencheCBSetor(this);
 
@@ -28,15 +29,15 @@ namespace ProjetoPonto.View
 
         }
 
-        private void EditarFuncionarioView_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnEditar_Click(object sender, EventArgs e)
         {
             EditarFuncionarioController obj = new EditarFuncionarioController();
             obj.EditaFuncionario(this);
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

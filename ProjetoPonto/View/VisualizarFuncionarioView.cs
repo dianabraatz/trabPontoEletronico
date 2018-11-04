@@ -93,7 +93,8 @@ namespace ProjetoPonto.View
 
         private void btnCadastrarFuncionario_Click(object sender, EventArgs e)
         {
-
+            CadastrarFuncionarioView obj = new CadastrarFuncionarioView();
+            obj.Show();
         }
 
         private void btnVisualizar_Click(object sender, EventArgs e)

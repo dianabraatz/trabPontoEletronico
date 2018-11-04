@@ -73,9 +73,20 @@ namespace Coprel.Controller
             if (resultado == 1)
             {
                 MessageBox.Show("Dados do funcionario " + f.GetNome() + " alterados com sucesso!");
+
+                AdmVisualizarFuncionarioController c1 = new AdmVisualizarFuncionarioController();
             }
             else
                 MessageBox.Show("Não foi possível alterar os dados do usuário. Tente novamente.");
+        }
+
+        public static void InicializaCompontentes(EditarFuncionarioView tela)
+        {
+            tela.tfCNH.MaxLength = 11;
+            tela.tfRG.MaxLength = 14;
+            tela.tfCPF.MaxLength = 11;
+            tela.tfCTPS.MaxLength = 20;
+            tela.tfNome.MaxLength = 90;
         }
     }
 }

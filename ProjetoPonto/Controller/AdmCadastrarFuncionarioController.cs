@@ -31,13 +31,7 @@ namespace ProjetoPonto.Controller
 
         public bool VerificaCampos(CadastrarFuncionarioView tela)
         {
-            if (tela.tfNumeroRegistro.Text == string.Empty)
-            {
-                tela.tfNumeroRegistro.Focus();
-                return true;
-            }
-
-            else if (tela.tfNome.Text == string.Empty)
+            if (tela.tfNome.Text == string.Empty)
             {
                 tela.tfNome.Focus();
                 return true;
@@ -111,11 +105,9 @@ namespace ProjetoPonto.Controller
         {
             if (!VerificaCampos(tela))
             {
-                tela.tfCPF.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
-                tela.tfRG.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
 
                 //OBTEM VALORES
-                int NumeroRegistro = Convert.ToInt32(tela.tfNumeroRegistro.Text);
+                //int NumeroRegistro = Convert.ToInt32(tela.tfNumeroRegistro.Text);
                 string Senha = (tela.tfSenha.Text);
                 string SenhaConfirmacao = tela.tfConfirmaSenha.Text;
                 DateTime DataNascimento = Convert.ToDateTime(tela.tfDataNascimento.Text);
@@ -133,7 +125,7 @@ namespace ProjetoPonto.Controller
                 {
                     //SETA NO OBJETO
                     Funcionario f = new Funcionario();
-                    f.SetNumeroRegistro(NumeroRegistro);
+                  // f.SetNumeroRegistro(NumeroRegistro);
                     f.SetNome(Nome);
                     f.SetDataNascimento(DataNascimento);
                     f.SetCPF(CPF);
@@ -172,7 +164,6 @@ namespace ProjetoPonto.Controller
 
         public void LimparCampos(CadastrarFuncionarioView tela)
         {
-            tela.tfNumeroRegistro.Text = "";
             tela.tfNome.Text = "";
             tela.tfRG.Text = "";
             tela.tfCNH.Text = "";
@@ -187,6 +178,15 @@ namespace ProjetoPonto.Controller
 
             tela.tfConfirmaSenha.Enabled = false;
             tela.btnCadastrar.Enabled = false;
+        }
+
+        public static void InicializaCompontente(CadastrarFuncionarioView tela)
+        {
+            tela.tfCNH.MaxLength = 11;
+            tela.tfRG.MaxLength = 14;
+            tela.tfCPF.MaxLength = 11;
+            tela.tfCTPS.MaxLength = 20;
+            tela.tfNome.MaxLength = 90;
         }
     }
 }

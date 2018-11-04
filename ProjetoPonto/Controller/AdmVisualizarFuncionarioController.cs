@@ -19,6 +19,7 @@ namespace Coprel.Controller
             tela.tabela.DataMember = ds.Tables[0].TableName;
         }
 
+
         public static void ExecutarFiltro(VisualizarFuncionarioView tela)
         {
             string sql = "";

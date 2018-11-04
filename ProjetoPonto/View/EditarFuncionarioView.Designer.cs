@@ -29,10 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditarFuncionarioView));
-            this.tfRG = new System.Windows.Forms.MaskedTextBox();
             this.tfDataAdmissao = new System.Windows.Forms.MaskedTextBox();
             this.tfDataNascimento = new System.Windows.Forms.MaskedTextBox();
-            this.tfCPF = new System.Windows.Forms.MaskedTextBox();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.cbFuncao = new System.Windows.Forms.ComboBox();
@@ -53,16 +51,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.tfRG = new System.Windows.Forms.TextBox();
+            this.tfCPF = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
-            // 
-            // tfRG
-            // 
-            this.tfRG.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tfRG.Location = new System.Drawing.Point(295, 212);
-            this.tfRG.Mask = "00000000000000";
-            this.tfRG.Name = "tfRG";
-            this.tfRG.Size = new System.Drawing.Size(267, 26);
-            this.tfRG.TabIndex = 89;
             // 
             // tfDataAdmissao
             // 
@@ -71,7 +62,7 @@
             this.tfDataAdmissao.Mask = "00/00/0000";
             this.tfDataAdmissao.Name = "tfDataAdmissao";
             this.tfDataAdmissao.Size = new System.Drawing.Size(267, 26);
-            this.tfDataAdmissao.TabIndex = 88;
+            this.tfDataAdmissao.TabIndex = 7;
             this.tfDataAdmissao.ValidatingType = typeof(System.DateTime);
             // 
             // tfDataNascimento
@@ -81,17 +72,8 @@
             this.tfDataNascimento.Mask = "00/00/0000";
             this.tfDataNascimento.Name = "tfDataNascimento";
             this.tfDataNascimento.Size = new System.Drawing.Size(267, 26);
-            this.tfDataNascimento.TabIndex = 87;
+            this.tfDataNascimento.TabIndex = 6;
             this.tfDataNascimento.ValidatingType = typeof(System.DateTime);
-            // 
-            // tfCPF
-            // 
-            this.tfCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tfCPF.Location = new System.Drawing.Point(295, 244);
-            this.tfCPF.Mask = "000.000.000-00";
-            this.tfCPF.Name = "tfCPF";
-            this.tfCPF.Size = new System.Drawing.Size(267, 26);
-            this.tfCPF.TabIndex = 90;
             // 
             // btnVoltar
             // 
@@ -102,6 +84,7 @@
             this.btnVoltar.TabIndex = 86;
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.UseVisualStyleBackColor = true;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
             // btnEditar
             // 
@@ -116,21 +99,23 @@
             // 
             // cbFuncao
             // 
+            this.cbFuncao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbFuncao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbFuncao.FormattingEnabled = true;
             this.cbFuncao.Location = new System.Drawing.Point(295, 404);
             this.cbFuncao.Name = "cbFuncao";
             this.cbFuncao.Size = new System.Drawing.Size(267, 28);
-            this.cbFuncao.TabIndex = 82;
+            this.cbFuncao.TabIndex = 9;
             // 
             // cbSetor
             // 
+            this.cbSetor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbSetor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbSetor.FormattingEnabled = true;
             this.cbSetor.Location = new System.Drawing.Point(295, 436);
             this.cbSetor.Name = "cbSetor";
             this.cbSetor.Size = new System.Drawing.Size(267, 28);
-            this.cbSetor.TabIndex = 81;
+            this.cbSetor.TabIndex = 10;
             // 
             // label13
             // 
@@ -148,7 +133,7 @@
             this.tfCTPS.Location = new System.Drawing.Point(295, 372);
             this.tfCTPS.Name = "tfCTPS";
             this.tfCTPS.Size = new System.Drawing.Size(267, 26);
-            this.tfCTPS.TabIndex = 79;
+            this.tfCTPS.TabIndex = 8;
             // 
             // label12
             // 
@@ -186,7 +171,7 @@
             this.tfCNH.Location = new System.Drawing.Point(295, 276);
             this.tfCNH.Name = "tfCNH";
             this.tfCNH.Size = new System.Drawing.Size(267, 26);
-            this.tfCNH.TabIndex = 75;
+            this.tfCNH.TabIndex = 5;
             // 
             // label7
             // 
@@ -244,7 +229,7 @@
             this.tfNome.Location = new System.Drawing.Point(295, 180);
             this.tfNome.Name = "tfNome";
             this.tfNome.Size = new System.Drawing.Size(267, 26);
-            this.tfNome.TabIndex = 68;
+            this.tfNome.TabIndex = 2;
             // 
             // tfNumeroRegistro
             // 
@@ -253,7 +238,7 @@
             this.tfNumeroRegistro.Location = new System.Drawing.Point(295, 148);
             this.tfNumeroRegistro.Name = "tfNumeroRegistro";
             this.tfNumeroRegistro.Size = new System.Drawing.Size(267, 26);
-            this.tfNumeroRegistro.TabIndex = 67;
+            this.tfNumeroRegistro.TabIndex = 1;
             // 
             // label1
             // 
@@ -284,18 +269,34 @@
             this.label9.Size = new System.Drawing.Size(200, 94);
             this.label9.TabIndex = 91;
             // 
+            // tfRG
+            // 
+            this.tfRG.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tfRG.Location = new System.Drawing.Point(295, 213);
+            this.tfRG.Name = "tfRG";
+            this.tfRG.Size = new System.Drawing.Size(267, 26);
+            this.tfRG.TabIndex = 3;
+            // 
+            // tfCPF
+            // 
+            this.tfCPF.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tfCPF.Location = new System.Drawing.Point(295, 245);
+            this.tfCPF.Name = "tfCPF";
+            this.tfCPF.Size = new System.Drawing.Size(267, 26);
+            this.tfCPF.TabIndex = 4;
+            // 
             // EditarFuncionarioView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(638, 524);
+            this.Controls.Add(this.tfCPF);
+            this.Controls.Add(this.tfRG);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.tfRG);
             this.Controls.Add(this.tfDataAdmissao);
             this.Controls.Add(this.tfDataNascimento);
-            this.Controls.Add(this.tfCPF);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.cbFuncao);
@@ -317,17 +318,14 @@
             this.Name = "EditarFuncionarioView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DCPoint - Gerencimento do Funcionário";
-            this.Load += new System.EventHandler(this.EditarFuncionarioView_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        public System.Windows.Forms.MaskedTextBox tfRG;
         public System.Windows.Forms.MaskedTextBox tfDataAdmissao;
         public System.Windows.Forms.MaskedTextBox tfDataNascimento;
-        public System.Windows.Forms.MaskedTextBox tfCPF;
         public System.Windows.Forms.Button btnVoltar;
         public System.Windows.Forms.Button btnEditar;
         public System.Windows.Forms.ComboBox cbFuncao;
@@ -348,5 +346,7 @@
         public System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label9;
+        public System.Windows.Forms.TextBox tfRG;
+        public System.Windows.Forms.TextBox tfCPF;
     }
 }

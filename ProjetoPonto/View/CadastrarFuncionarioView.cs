@@ -18,8 +18,8 @@ namespace ProjetoPonto.View
             InitializeComponent();
             AdmCadastrarFuncionarioController.PreencheCBFuncao(this);
             AdmCadastrarFuncionarioController.PreencheCBSetor(this);
+            AdmCadastrarFuncionarioController.InicializaCompontente(this);
 
-            tfNumeroRegistro.Select();
             tfConfirmaSenha.Enabled = false;
             btnCadastrar.Enabled = false;
         }

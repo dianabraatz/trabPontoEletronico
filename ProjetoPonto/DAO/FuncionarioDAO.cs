@@ -80,13 +80,12 @@ namespace ProjetoPonto.DAO
 
         public int CadastraFuncionario(Funcionario f)
         {
-            String sql = "INSERT INTO funcionario ([numRegistro], [senha], [dataNascimento], [nome], [rg], [cpf], [cnh], [dataAdmissao], [ctps], [codFuncao], [codSetor]) VALUES " +
-                                                 "(@numRegistro, @senha, @DataNascimento, @Nome, @RG, @CPF, @CNH, @DataAdmissao, @CTPS , @CodFuncao, @CodSetor)";
+            String sql = "INSERT INTO funcionario ([senha], [dataNascimento], [nome], [rg], [cpf], [cnh], [dataAdmissao], [ctps], [codFuncao], [codSetor]) VALUES " +
+                                                 "(@senha, @DataNascimento, @Nome, @RG, @CPF, @CNH, @DataAdmissao, @CTPS , @CodFuncao, @CodSetor)";
             int result;
 
             SqlConnection conn = new SqlConnection(strConnection);
             SqlCommand sqlcmd = new SqlCommand(sql, conn);
-            sqlcmd.Parameters.AddWithValue("@numRegistro", f.GetNumeroRegistro());
             sqlcmd.Parameters.AddWithValue("@senha", f.GetSenha());
             sqlcmd.Parameters.AddWithValue("@DataNascimento", f.GetDataNascimento());
             sqlcmd.Parameters.AddWithValue("@Nome", f.GetNome());
@@ -304,7 +303,6 @@ namespace ProjetoPonto.DAO
         public int EditarFuncionario(Funcionario f)
         {
             string sql = "UPDATE funcionario SET dataNascimento = @DataNascimento, nome = @Nome, rg = @RG, cpf = @CPF, cnh = @CNH,dataAdmissao = @DataAdmissao, ctps = @CTPS, codFuncao = @CodFuncao, codSetor = @CodSetor WHERE numRegistro = @numRegistro;";
-
             int result = 0;
 
             SqlConnection conn = new SqlConnection(strConnection);

@@ -52,6 +52,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>bdpontoDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Controller\AdmVisualizarInformacoesController.cs" />
     <Compile Include="Controller\AdmVisualizarOcorrenciaController.cs" />
     <Compile Include="Controller\EditarFuncionarioController.cs" />
     <Compile Include="Controller\AdmCadastrarFuncionarioController.cs" />
@@ -76,6 +77,12 @@
     </Compile>
     <Compile Include="Relatórios\FormRelPontoFuncionario.Designer.cs">
       <DependentUpon>FormRelPontoFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AdmVisualizarInformacoesView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AdmVisualizarInformacoesView.Designer.cs">
+      <DependentUpon>AdmVisualizarInformacoesView.cs</DependentUpon>
     </Compile>
     <Compile Include="View\AdmVisualizarOcorrenciasView.cs">
       <SubType>Form</SubType>
@@ -161,6 +168,9 @@
       <DependentUpon>FormRelPontoFuncionario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Relatórios\RelPontoFuncionario.rdlc" />
+    <EmbeddedResource Include="View\AdmVisualizarInformacoesView.resx">
+      <DependentUpon>AdmVisualizarInformacoesView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\AdmVisualizarOcorrenciasView.resx">
       <DependentUpon>AdmVisualizarOcorrenciasView.cs</DependentUpon>
     </EmbeddedResource>

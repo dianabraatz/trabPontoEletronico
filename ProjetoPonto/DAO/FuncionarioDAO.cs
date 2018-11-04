@@ -336,6 +336,76 @@ namespace ProjetoPonto.DAO
             return result;
         }
 
+        public List<Funcionario> PreencheCamposAVF(int numeroRegistro)
+        {
+            string sql = "select f.numRegistro as 'num', f.dataNascimento as 'data', f.nome, f.rg, f.cpf, f.cnh, f.dataAdmissao 'dataAdm', f.ctps, fun.nome as 'Funcao', s.nome as 'Setor' from funcionario f JOIN setor s ON f.codSetor = s.codSetor JOIN funcao fun ON f.codFuncao = fun.codFuncao WHERE f.numRegistro = @registro";
+
+            SqlConnection conn = new SqlConnection(strConnection);
+            SqlCommand sqlcmd = new SqlCommand(sql, conn);
+            List<Funcionario> lista = new List<Funcionario>();
+
+            sqlcmd.Parameters.AddWithValue("@registro", numeroRegistro);
+
+            try
+            {
+                conn.Open();
+                SqlDataReader result = sqlcmd.ExecuteReader();
+
+                while (result.Read())
+                {
+                    Funcionario f = new Funcionario();
+                    f.SetNumeroRegistro(Convert.ToInt32(result["num"]));
+                    f.SetNome(Convert.ToString(result["nome"]));
+                    f.SetCPF(Convert.ToString(result["cpf"]));
+                    f.SetCNH(Convert.ToString(result["cnh"]));
+                    f.SetNomeFuncao(Convert.ToString(result["Funcao"]));
+                    f.SetNomeSetor(Convert.ToString(result["Setor"]));
+                    f.SetCTPS(Convert.ToString(result["ctps"]));
+                    f.SetDataAdmissao(Convert.ToDateTime(result["dataAdm"]));
+                    f.SetDataNascimento(Convert.ToDateTime(result["data"]));
+                    f.SetRG(Convert.ToString(result["rg"]));
+
+                    lista.Add(f);
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return lista;
+        }
+
+        public static DataSet PreencheTabelaPontoAVF(int numeroRegistro)
+        {
+            string sql = "SELECT codPonto as Código, CONVERT(date, dh_ponto1) as 'Data', CONVERT(VARCHAR(10), dh_ponto1, 108) as 'Primeiro', CONVERT(VARCHAR(10), dh_ponto2, 108) as 'Segundo' ,CONVERT(VARCHAR(10), dh_ponto3, 108) as 'Terceiro', CONVERT(VARCHAR(10), dh_ponto4, 108) as 'Quarto' FROM ponto WHERE numRegistro = @numRegistro;";
+            SqlConnection conn = new SqlConnection(strConnection);
+            SqlCommand sqlcmd = new SqlCommand(sql, conn);
+
+            sqlcmd.Parameters.AddWithValue("@numRegistro", numeroRegistro);
+
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            adapter.SelectCommand = sqlcmd;
+            DataSet dataSet = new DataSet();
+
+            try
+            {
+                conn.Open();    //abre a conexao com o banco
+                adapter.Fill(dataSet);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return dataSet;
+        }
     }
 }
 

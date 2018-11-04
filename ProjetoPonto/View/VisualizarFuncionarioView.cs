@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Coprel.Controller;
+using Coprel.View;
 using ProjetoPonto.Controller;
 
 namespace ProjetoPonto.View
@@ -99,7 +100,8 @@ namespace ProjetoPonto.View
 
         private void btnVisualizar_Click(object sender, EventArgs e)
         {
-
+            AdmVisualizarInformacoesView obj = new AdmVisualizarInformacoesView(numeroRegistro);
+            obj.Show();
         }
 
         private void VisualizarFuncionarioView_Load(object sender, EventArgs e)

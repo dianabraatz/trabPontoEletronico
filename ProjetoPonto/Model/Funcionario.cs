@@ -21,6 +21,9 @@ namespace ProjetoPonto.Model
         private int CodSetor;
         private string SenhaConfirmacao;
 
+        private string NomeSetor;
+        private string NomeFuncao;
+
         public string GetSenhaConfirmacao()
         {
             return SenhaConfirmacao;
@@ -139,6 +142,26 @@ namespace ProjetoPonto.Model
         public void SetNome(string value)
         {
             this.Nome = value;
+        }
+
+        public string GetNomeSetor()
+        {
+            return NomeSetor;
+        }
+
+        public void SetNomeSetor(string value)
+        {
+            this.NomeSetor = value;
+        }
+
+        public string GetNomeFuncao()
+        {
+            return NomeFuncao;
+        }
+
+        public void SetNomeFuncao(string value)
+        {
+            this.NomeFuncao = value;
         }
     }
 }

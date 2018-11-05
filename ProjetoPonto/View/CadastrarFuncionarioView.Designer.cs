@@ -130,6 +130,7 @@
             // 
             // cbFuncao
             // 
+            this.cbFuncao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbFuncao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbFuncao.FormattingEnabled = true;
             this.cbFuncao.Location = new System.Drawing.Point(287, 371);
@@ -139,12 +140,14 @@
             // 
             // cbSetor
             // 
+            this.cbSetor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbSetor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbSetor.FormattingEnabled = true;
             this.cbSetor.Location = new System.Drawing.Point(287, 403);
             this.cbSetor.Name = "cbSetor";
             this.cbSetor.Size = new System.Drawing.Size(267, 28);
-            this.cbSetor.TabIndex = 9;            // 
+            this.cbSetor.TabIndex = 9;
+            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -161,7 +164,8 @@
             this.tfCTPS.Location = new System.Drawing.Point(287, 339);
             this.tfCTPS.Name = "tfCTPS";
             this.tfCTPS.Size = new System.Drawing.Size(267, 26);
-            this.tfCTPS.TabIndex = 7;            // 
+            this.tfCTPS.TabIndex = 7;
+            // 
             // label12
             // 
             this.label12.AutoSize = true;

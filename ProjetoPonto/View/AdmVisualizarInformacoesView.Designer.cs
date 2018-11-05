@@ -52,6 +52,10 @@
             this.funcao = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.tabela = new System.Windows.Forms.DataGridView();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnGerarRelatorio = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.tabela)).BeginInit();
             this.SuspendLayout();
             // 
@@ -278,16 +282,65 @@
             // tabela
             // 
             this.tabela.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tabela.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.tabela.Location = new System.Drawing.Point(12, 478);
+            this.tabela.MultiSelect = false;
             this.tabela.Name = "tabela";
+            this.tabela.ReadOnly = true;
+            this.tabela.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.tabela.Size = new System.Drawing.Size(633, 203);
             this.tabela.TabIndex = 94;
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.Location = new System.Drawing.Point(528, 700);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(117, 26);
+            this.btnEditar.TabIndex = 95;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // btnGerarRelatorio
+            // 
+            this.btnGerarRelatorio.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGerarRelatorio.Location = new System.Drawing.Point(282, 700);
+            this.btnGerarRelatorio.Name = "btnGerarRelatorio";
+            this.btnGerarRelatorio.Size = new System.Drawing.Size(117, 26);
+            this.btnGerarRelatorio.TabIndex = 96;
+            this.btnGerarRelatorio.Text = "Relatório";
+            this.btnGerarRelatorio.UseVisualStyleBackColor = true;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(8, 452);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(264, 23);
+            this.label11.TabIndex = 97;
+            this.label11.Text = "Últimos pontos cadastrados:";
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(405, 700);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(117, 26);
+            this.button2.TabIndex = 99;
+            this.button2.Text = "Alterar Senha";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // AdmVisualizarInformacoesView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(657, 749);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.btnGerarRelatorio);
+            this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.tabela);
             this.Controls.Add(this.funcao);
             this.Controls.Add(this.label22);
@@ -344,5 +397,9 @@
         public System.Windows.Forms.Label funcao;
         public System.Windows.Forms.Label label22;
         public System.Windows.Forms.DataGridView tabela;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button btnGerarRelatorio;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button button2;
     }
 }

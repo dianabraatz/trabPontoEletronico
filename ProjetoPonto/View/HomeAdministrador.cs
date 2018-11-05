@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Coprel.Relatórios;
 using Coprel.View;
 using ProjetoPonto.View;
 
@@ -40,6 +41,12 @@ namespace ProjetoPonto.View
         private void btnSetor_Click(object sender, EventArgs e)
         {
             SetorView obj = new SetorView();
+            obj.Show();
+        }
+
+        private void btnRelatorio_Click(object sender, EventArgs e)
+        {
+            FormRelPontoFuncionario obj = new FormRelPontoFuncionario();
             obj.Show();
         }
     }

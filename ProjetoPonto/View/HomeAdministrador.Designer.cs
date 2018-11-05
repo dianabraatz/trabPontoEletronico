@@ -90,6 +90,7 @@
             this.btnRelatorio.TabIndex = 7;
             this.btnRelatorio.Text = "Relatórios";
             this.btnRelatorio.UseVisualStyleBackColor = true;
+            this.btnRelatorio.Click += new System.EventHandler(this.btnRelatorio_Click);
             // 
             // HomeAdministrador
             // 

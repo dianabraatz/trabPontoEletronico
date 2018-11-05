@@ -20,6 +20,12 @@ namespace Coprel.Relatórios
         private void FormRelPontoFuncionario_Load(object sender, EventArgs e)
         {
 
+            this.reportViewer1.RefreshReport();
+        }
+
+        private void bindingSource1_CurrentChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

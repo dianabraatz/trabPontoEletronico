@@ -64,13 +64,12 @@ SELECT numRegistro, nome FROM funcionario WHERE (numRegistro = @numRegistro)</Co
             </Mappings>
             <Sources />
           </TableAdapter>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTableTableAdapterPF" GeneratorDataComponentClassName="DataTableTableAdapterPF" Name="DataTablePontoFuncionario" UserDataComponentName="DataTableTableAdapterPF">
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PFTableAdapter" GeneratorDataComponentClassName="PFTableAdapter" Name="DataTablePF" UserDataComponentName="PFTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="bdpontoConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillPontoFuncionario" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetDataPontoFuncionario" GeneratorSourceName="FillPontoFuncionario" GetMethodModifier="Public" GetMethodName="GetDataPontoFuncionario" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataPontoFuncionario" UserSourceName="FillPontoFuncionario">
+              <DbSource ConnectionRef="bdpontoConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillPF" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetDataPF" GeneratorSourceName="FillPF" GetMethodModifier="Public" GetMethodName="GetDataPF" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataPF" UserSourceName="FillPF">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        funcionario.numRegistro AS [Número de Registro], funcionario.nome AS Nome, ponto.dh_ponto1 AS [Entrada manhã], ponto.dh_ponto2 AS [Saída manhã], ponto.dh_ponto3 AS [Entrada tarde], 
-                         ponto.dh_ponto4 AS [Saída tarde]
+                    <CommandText>SELECT        funcionario.numRegistro, funcionario.nome, ponto.dh_ponto1, ponto.dh_ponto2, ponto.dh_ponto3, ponto.dh_ponto4
 FROM            funcionario INNER JOIN
                          ponto ON funcionario.numRegistro = ponto.numRegistro</CommandText>
                     <Parameters />
@@ -79,12 +78,12 @@ FROM            funcionario INNER JOIN
               </DbSource>
             </MainSource>
             <Mappings>
-              <Mapping SourceColumn="Número de Registro" DataSetColumn="Número de Registro" />
-              <Mapping SourceColumn="Nome" DataSetColumn="Nome" />
-              <Mapping SourceColumn="Entrada manhã" DataSetColumn="Entrada manhã" />
-              <Mapping SourceColumn="Saída manhã" DataSetColumn="Saída manhã" />
-              <Mapping SourceColumn="Entrada tarde" DataSetColumn="Entrada tarde" />
-              <Mapping SourceColumn="Saída tarde" DataSetColumn="Saída tarde" />
+              <Mapping SourceColumn="numRegistro" DataSetColumn="numRegistro" />
+              <Mapping SourceColumn="nome" DataSetColumn="nome" />
+              <Mapping SourceColumn="dh_ponto1" DataSetColumn="dh_ponto1" />
+              <Mapping SourceColumn="dh_ponto2" DataSetColumn="dh_ponto2" />
+              <Mapping SourceColumn="dh_ponto3" DataSetColumn="dh_ponto3" />
+              <Mapping SourceColumn="dh_ponto4" DataSetColumn="dh_ponto4" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -93,7 +92,7 @@ FROM            funcionario INNER JOIN
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="bdpontoDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="bdpontoDataSet" msprop:Generator_UserDSName="bdpontoDataSet">
+  <xs:element name="bdpontoDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msdata:EnforceConstraints="False" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="bdpontoDataSet" msprop:Generator_UserDSName="bdpontoDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="funcionario" msprop:Generator_TableClassName="funcionarioDataTable" msprop:Generator_TableVarName="tablefuncionario" msprop:Generator_RowChangedName="funcionarioRowChanged" msprop:Generator_TablePropName="funcionario" msprop:Generator_RowDeletingName="funcionarioRowDeleting" msprop:Generator_RowChangingName="funcionarioRowChanging" msprop:Generator_RowEvHandlerName="funcionarioRowChangeEventHandler" msprop:Generator_RowDeletedName="funcionarioRowDeleted" msprop:Generator_RowClassName="funcionarioRow" msprop:Generator_UserTableName="funcionario" msprop:Generator_RowEvArgName="funcionarioRowChangeEvent">
@@ -120,21 +119,21 @@ FROM            funcionario INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="DataTablePontoFuncionario" msprop:Generator_TableClassName="DataTablePontoFuncionarioDataTable" msprop:Generator_TableVarName="tableDataTablePontoFuncionario" msprop:Generator_TablePropName="DataTablePontoFuncionario" msprop:Generator_RowDeletingName="DataTablePontoFuncionarioRowDeleting" msprop:Generator_RowChangingName="DataTablePontoFuncionarioRowChanging" msprop:Generator_RowEvHandlerName="DataTablePontoFuncionarioRowChangeEventHandler" msprop:Generator_RowDeletedName="DataTablePontoFuncionarioRowDeleted" msprop:Generator_UserTableName="DataTablePontoFuncionario" msprop:Generator_RowChangedName="DataTablePontoFuncionarioRowChanged" msprop:Generator_RowEvArgName="DataTablePontoFuncionarioRowChangeEvent" msprop:Generator_RowClassName="DataTablePontoFuncionarioRow">
+        <xs:element name="DataTablePF" msprop:Generator_TableClassName="DataTablePFDataTable" msprop:Generator_TableVarName="tableDataTablePF" msprop:Generator_TablePropName="DataTablePF" msprop:Generator_RowDeletingName="DataTablePFRowDeleting" msprop:Generator_RowChangingName="DataTablePFRowChanging" msprop:Generator_RowEvHandlerName="DataTablePFRowChangeEventHandler" msprop:Generator_RowDeletedName="DataTablePFRowDeleted" msprop:Generator_UserTableName="DataTablePF" msprop:Generator_RowChangedName="DataTablePFRowChanged" msprop:Generator_RowEvArgName="DataTablePFRowChangeEvent" msprop:Generator_RowClassName="DataTablePFRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Número_x0020_de_x0020_Registro" msprop:Generator_ColumnVarNameInTable="columnNúmero_de_Registro" msprop:Generator_ColumnPropNameInRow="Número_de_Registro" msprop:Generator_ColumnPropNameInTable="Número_de_RegistroColumn" msprop:Generator_UserColumnName="Número de Registro" type="xs:int" />
-              <xs:element name="Nome" msprop:Generator_ColumnVarNameInTable="columnNome" msprop:Generator_ColumnPropNameInRow="Nome" msprop:Generator_ColumnPropNameInTable="NomeColumn" msprop:Generator_UserColumnName="Nome">
+              <xs:element name="numRegistro" msprop:Generator_ColumnVarNameInTable="columnnumRegistro" msprop:Generator_ColumnPropNameInRow="numRegistro" msprop:Generator_ColumnPropNameInTable="numRegistroColumn" msprop:Generator_UserColumnName="numRegistro" type="xs:int" />
+              <xs:element name="nome" msprop:Generator_ColumnVarNameInTable="columnnome" msprop:Generator_ColumnPropNameInRow="nome" msprop:Generator_ColumnPropNameInTable="nomeColumn" msprop:Generator_UserColumnName="nome">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="90" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Entrada_x0020_manhã" msprop:Generator_ColumnVarNameInTable="columnEntrada_manhã" msprop:Generator_ColumnPropNameInRow="Entrada_manhã" msprop:Generator_ColumnPropNameInTable="Entrada_manhãColumn" msprop:Generator_UserColumnName="Entrada manhã" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="Saída_x0020_manhã" msprop:Generator_ColumnVarNameInTable="columnSaída_manhã" msprop:Generator_ColumnPropNameInRow="Saída_manhã" msprop:Generator_ColumnPropNameInTable="Saída_manhãColumn" msprop:Generator_UserColumnName="Saída manhã" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="Entrada_x0020_tarde" msprop:Generator_ColumnVarNameInTable="columnEntrada_tarde" msprop:Generator_ColumnPropNameInRow="Entrada_tarde" msprop:Generator_ColumnPropNameInTable="Entrada_tardeColumn" msprop:Generator_UserColumnName="Entrada tarde" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="Saída_x0020_tarde" msprop:Generator_ColumnVarNameInTable="columnSaída_tarde" msprop:Generator_ColumnPropNameInRow="Saída_tarde" msprop:Generator_ColumnPropNameInTable="Saída_tardeColumn" msprop:Generator_UserColumnName="Saída tarde" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="dh_ponto1" msprop:Generator_ColumnVarNameInTable="columndh_ponto1" msprop:Generator_ColumnPropNameInRow="dh_ponto1" msprop:Generator_ColumnPropNameInTable="dh_ponto1Column" msprop:Generator_UserColumnName="dh_ponto1" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="dh_ponto2" msprop:Generator_ColumnVarNameInTable="columndh_ponto2" msprop:Generator_ColumnPropNameInRow="dh_ponto2" msprop:Generator_ColumnPropNameInTable="dh_ponto2Column" msprop:Generator_UserColumnName="dh_ponto2" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="dh_ponto3" msprop:Generator_ColumnVarNameInTable="columndh_ponto3" msprop:Generator_ColumnPropNameInRow="dh_ponto3" msprop:Generator_ColumnPropNameInTable="dh_ponto3Column" msprop:Generator_UserColumnName="dh_ponto3" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="dh_ponto4" msprop:Generator_ColumnVarNameInTable="columndh_ponto4" msprop:Generator_ColumnPropNameInRow="dh_ponto4" msprop:Generator_ColumnPropNameInTable="dh_ponto4Column" msprop:Generator_UserColumnName="dh_ponto4" type="xs:dateTime" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -144,9 +143,9 @@ FROM            funcionario INNER JOIN
       <xs:selector xpath=".//mstns:funcionario" />
       <xs:field xpath="mstns:numRegistro" />
     </xs:unique>
-    <xs:unique name="DataTablePontoFuncionario_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:DataTablePontoFuncionario" />
-      <xs:field xpath="mstns:Número_x0020_de_x0020_Registro" />
+    <xs:unique name="DataTablePF_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DataTablePF" />
+      <xs:field xpath="mstns:numRegistro" />
     </xs:unique>
   </xs:element>
 </xs:schema>

@@ -19,13 +19,10 @@ namespace Coprel.Relatórios
 
         private void FormRelPontoFuncionario_Load(object sender, EventArgs e)
         {
+            // TODO: esta linha de código carrega dados na tabela 'bdpontoDataSet.DataTablePF'. Você pode movê-la ou removê-la conforme necessário.
+            this.pFTableAdapter.FillPF(this.bdpontoDataSet.DataTablePF);
 
             this.reportViewer1.RefreshReport();
-        }
-
-        private void bindingSource1_CurrentChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

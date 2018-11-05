@@ -28,7 +28,7 @@ namespace Coprel {
         
         private pontoDataTable tableponto;
         
-        private DataTablePontoFuncionarioDataTable tableDataTablePontoFuncionario;
+        private DataTablePFDataTable tableDataTablePF;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -64,8 +64,8 @@ namespace Coprel {
                 if ((ds.Tables["ponto"] != null)) {
                     base.Tables.Add(new pontoDataTable(ds.Tables["ponto"]));
                 }
-                if ((ds.Tables["DataTablePontoFuncionario"] != null)) {
-                    base.Tables.Add(new DataTablePontoFuncionarioDataTable(ds.Tables["DataTablePontoFuncionario"]));
+                if ((ds.Tables["DataTablePF"] != null)) {
+                    base.Tables.Add(new DataTablePFDataTable(ds.Tables["DataTablePF"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -109,9 +109,9 @@ namespace Coprel {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public DataTablePontoFuncionarioDataTable DataTablePontoFuncionario {
+        public DataTablePFDataTable DataTablePF {
             get {
-                return this.tableDataTablePontoFuncionario;
+                return this.tableDataTablePF;
             }
         }
         
@@ -188,8 +188,8 @@ namespace Coprel {
                 if ((ds.Tables["ponto"] != null)) {
                     base.Tables.Add(new pontoDataTable(ds.Tables["ponto"]));
                 }
-                if ((ds.Tables["DataTablePontoFuncionario"] != null)) {
-                    base.Tables.Add(new DataTablePontoFuncionarioDataTable(ds.Tables["DataTablePontoFuncionario"]));
+                if ((ds.Tables["DataTablePF"] != null)) {
+                    base.Tables.Add(new DataTablePFDataTable(ds.Tables["DataTablePF"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -236,10 +236,10 @@ namespace Coprel {
                     this.tableponto.InitVars();
                 }
             }
-            this.tableDataTablePontoFuncionario = ((DataTablePontoFuncionarioDataTable)(base.Tables["DataTablePontoFuncionario"]));
+            this.tableDataTablePF = ((DataTablePFDataTable)(base.Tables["DataTablePF"]));
             if ((initTable == true)) {
-                if ((this.tableDataTablePontoFuncionario != null)) {
-                    this.tableDataTablePontoFuncionario.InitVars();
+                if ((this.tableDataTablePF != null)) {
+                    this.tableDataTablePF.InitVars();
                 }
             }
         }
@@ -250,14 +250,14 @@ namespace Coprel {
             this.DataSetName = "bdpontoDataSet";
             this.Prefix = "";
             this.Namespace = "http://tempuri.org/bdpontoDataSet.xsd";
-            this.EnforceConstraints = true;
+            this.EnforceConstraints = false;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tablefuncionario = new funcionarioDataTable();
             base.Tables.Add(this.tablefuncionario);
             this.tableponto = new pontoDataTable();
             base.Tables.Add(this.tableponto);
-            this.tableDataTablePontoFuncionario = new DataTablePontoFuncionarioDataTable();
-            base.Tables.Add(this.tableDataTablePontoFuncionario);
+            this.tableDataTablePF = new DataTablePFDataTable();
+            base.Tables.Add(this.tableDataTablePF);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -274,7 +274,7 @@ namespace Coprel {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializeDataTablePontoFuncionario() {
+        private bool ShouldSerializeDataTablePF() {
             return false;
         }
         
@@ -340,7 +340,7 @@ namespace Coprel {
         public delegate void pontoRowChangeEventHandler(object sender, pontoRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void DataTablePontoFuncionarioRowChangeEventHandler(object sender, DataTablePontoFuncionarioRowChangeEvent e);
+        public delegate void DataTablePFRowChangeEventHandler(object sender, DataTablePFRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -910,24 +910,24 @@ namespace Coprel {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class DataTablePontoFuncionarioDataTable : global::System.Data.TypedTableBase<DataTablePontoFuncionarioRow> {
+        public partial class DataTablePFDataTable : global::System.Data.TypedTableBase<DataTablePFRow> {
             
-            private global::System.Data.DataColumn columnNúmero_de_Registro;
+            private global::System.Data.DataColumn columnnumRegistro;
             
-            private global::System.Data.DataColumn columnNome;
+            private global::System.Data.DataColumn columnnome;
             
-            private global::System.Data.DataColumn columnEntrada_manhã;
+            private global::System.Data.DataColumn columndh_ponto1;
             
-            private global::System.Data.DataColumn columnSaída_manhã;
+            private global::System.Data.DataColumn columndh_ponto2;
             
-            private global::System.Data.DataColumn columnEntrada_tarde;
+            private global::System.Data.DataColumn columndh_ponto3;
             
-            private global::System.Data.DataColumn columnSaída_tarde;
+            private global::System.Data.DataColumn columndh_ponto4;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataTablePontoFuncionarioDataTable() {
-                this.TableName = "DataTablePontoFuncionario";
+            public DataTablePFDataTable() {
+                this.TableName = "DataTablePF";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -935,7 +935,7 @@ namespace Coprel {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal DataTablePontoFuncionarioDataTable(global::System.Data.DataTable table) {
+            internal DataTablePFDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -952,56 +952,56 @@ namespace Coprel {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected DataTablePontoFuncionarioDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected DataTablePFDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Número_de_RegistroColumn {
+            public global::System.Data.DataColumn numRegistroColumn {
                 get {
-                    return this.columnNúmero_de_Registro;
+                    return this.columnnumRegistro;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn NomeColumn {
+            public global::System.Data.DataColumn nomeColumn {
                 get {
-                    return this.columnNome;
+                    return this.columnnome;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Entrada_manhãColumn {
+            public global::System.Data.DataColumn dh_ponto1Column {
                 get {
-                    return this.columnEntrada_manhã;
+                    return this.columndh_ponto1;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Saída_manhãColumn {
+            public global::System.Data.DataColumn dh_ponto2Column {
                 get {
-                    return this.columnSaída_manhã;
+                    return this.columndh_ponto2;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Entrada_tardeColumn {
+            public global::System.Data.DataColumn dh_ponto3Column {
                 get {
-                    return this.columnEntrada_tarde;
+                    return this.columndh_ponto3;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Saída_tardeColumn {
+            public global::System.Data.DataColumn dh_ponto4Column {
                 get {
-                    return this.columnSaída_tarde;
+                    return this.columndh_ponto4;
                 }
             }
             
@@ -1016,57 +1016,57 @@ namespace Coprel {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataTablePontoFuncionarioRow this[int index] {
+            public DataTablePFRow this[int index] {
                 get {
-                    return ((DataTablePontoFuncionarioRow)(this.Rows[index]));
+                    return ((DataTablePFRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event DataTablePontoFuncionarioRowChangeEventHandler DataTablePontoFuncionarioRowChanging;
+            public event DataTablePFRowChangeEventHandler DataTablePFRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event DataTablePontoFuncionarioRowChangeEventHandler DataTablePontoFuncionarioRowChanged;
+            public event DataTablePFRowChangeEventHandler DataTablePFRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event DataTablePontoFuncionarioRowChangeEventHandler DataTablePontoFuncionarioRowDeleting;
+            public event DataTablePFRowChangeEventHandler DataTablePFRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event DataTablePontoFuncionarioRowChangeEventHandler DataTablePontoFuncionarioRowDeleted;
+            public event DataTablePFRowChangeEventHandler DataTablePFRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddDataTablePontoFuncionarioRow(DataTablePontoFuncionarioRow row) {
+            public void AddDataTablePFRow(DataTablePFRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataTablePontoFuncionarioRow AddDataTablePontoFuncionarioRow(int Número_de_Registro, string Nome, System.DateTime Entrada_manhã, System.DateTime Saída_manhã, System.DateTime Entrada_tarde, System.DateTime Saída_tarde) {
-                DataTablePontoFuncionarioRow rowDataTablePontoFuncionarioRow = ((DataTablePontoFuncionarioRow)(this.NewRow()));
+            public DataTablePFRow AddDataTablePFRow(int numRegistro, string nome, System.DateTime dh_ponto1, System.DateTime dh_ponto2, System.DateTime dh_ponto3, System.DateTime dh_ponto4) {
+                DataTablePFRow rowDataTablePFRow = ((DataTablePFRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Número_de_Registro,
-                        Nome,
-                        Entrada_manhã,
-                        Saída_manhã,
-                        Entrada_tarde,
-                        Saída_tarde};
-                rowDataTablePontoFuncionarioRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowDataTablePontoFuncionarioRow);
-                return rowDataTablePontoFuncionarioRow;
+                        numRegistro,
+                        nome,
+                        dh_ponto1,
+                        dh_ponto2,
+                        dh_ponto3,
+                        dh_ponto4};
+                rowDataTablePFRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowDataTablePFRow);
+                return rowDataTablePFRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataTablePontoFuncionarioRow FindByNúmero_de_Registro(int Número_de_Registro) {
-                return ((DataTablePontoFuncionarioRow)(this.Rows.Find(new object[] {
-                            Número_de_Registro})));
+            public DataTablePFRow FindBynumRegistro(int numRegistro) {
+                return ((DataTablePFRow)(this.Rows.Find(new object[] {
+                            numRegistro})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                DataTablePontoFuncionarioDataTable cln = ((DataTablePontoFuncionarioDataTable)(base.Clone()));
+                DataTablePFDataTable cln = ((DataTablePFDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -1074,67 +1074,67 @@ namespace Coprel {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new DataTablePontoFuncionarioDataTable();
+                return new DataTablePFDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
-                this.columnNúmero_de_Registro = base.Columns["Número de Registro"];
-                this.columnNome = base.Columns["Nome"];
-                this.columnEntrada_manhã = base.Columns["Entrada manhã"];
-                this.columnSaída_manhã = base.Columns["Saída manhã"];
-                this.columnEntrada_tarde = base.Columns["Entrada tarde"];
-                this.columnSaída_tarde = base.Columns["Saída tarde"];
+                this.columnnumRegistro = base.Columns["numRegistro"];
+                this.columnnome = base.Columns["nome"];
+                this.columndh_ponto1 = base.Columns["dh_ponto1"];
+                this.columndh_ponto2 = base.Columns["dh_ponto2"];
+                this.columndh_ponto3 = base.Columns["dh_ponto3"];
+                this.columndh_ponto4 = base.Columns["dh_ponto4"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
-                this.columnNúmero_de_Registro = new global::System.Data.DataColumn("Número de Registro", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNúmero_de_Registro);
-                this.columnNome = new global::System.Data.DataColumn("Nome", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNome);
-                this.columnEntrada_manhã = new global::System.Data.DataColumn("Entrada manhã", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnEntrada_manhã);
-                this.columnSaída_manhã = new global::System.Data.DataColumn("Saída manhã", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSaída_manhã);
-                this.columnEntrada_tarde = new global::System.Data.DataColumn("Entrada tarde", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnEntrada_tarde);
-                this.columnSaída_tarde = new global::System.Data.DataColumn("Saída tarde", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSaída_tarde);
+                this.columnnumRegistro = new global::System.Data.DataColumn("numRegistro", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnumRegistro);
+                this.columnnome = new global::System.Data.DataColumn("nome", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnome);
+                this.columndh_ponto1 = new global::System.Data.DataColumn("dh_ponto1", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndh_ponto1);
+                this.columndh_ponto2 = new global::System.Data.DataColumn("dh_ponto2", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndh_ponto2);
+                this.columndh_ponto3 = new global::System.Data.DataColumn("dh_ponto3", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndh_ponto3);
+                this.columndh_ponto4 = new global::System.Data.DataColumn("dh_ponto4", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndh_ponto4);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnNúmero_de_Registro}, true));
-                this.columnNúmero_de_Registro.AllowDBNull = false;
-                this.columnNúmero_de_Registro.Unique = true;
-                this.columnNome.AllowDBNull = false;
-                this.columnNome.MaxLength = 90;
+                                this.columnnumRegistro}, true));
+                this.columnnumRegistro.AllowDBNull = false;
+                this.columnnumRegistro.Unique = true;
+                this.columnnome.AllowDBNull = false;
+                this.columnnome.MaxLength = 90;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataTablePontoFuncionarioRow NewDataTablePontoFuncionarioRow() {
-                return ((DataTablePontoFuncionarioRow)(this.NewRow()));
+            public DataTablePFRow NewDataTablePFRow() {
+                return ((DataTablePFRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new DataTablePontoFuncionarioRow(builder);
+                return new DataTablePFRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(DataTablePontoFuncionarioRow);
+                return typeof(DataTablePFRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.DataTablePontoFuncionarioRowChanged != null)) {
-                    this.DataTablePontoFuncionarioRowChanged(this, new DataTablePontoFuncionarioRowChangeEvent(((DataTablePontoFuncionarioRow)(e.Row)), e.Action));
+                if ((this.DataTablePFRowChanged != null)) {
+                    this.DataTablePFRowChanged(this, new DataTablePFRowChangeEvent(((DataTablePFRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1142,8 +1142,8 @@ namespace Coprel {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.DataTablePontoFuncionarioRowChanging != null)) {
-                    this.DataTablePontoFuncionarioRowChanging(this, new DataTablePontoFuncionarioRowChangeEvent(((DataTablePontoFuncionarioRow)(e.Row)), e.Action));
+                if ((this.DataTablePFRowChanging != null)) {
+                    this.DataTablePFRowChanging(this, new DataTablePFRowChangeEvent(((DataTablePFRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1151,8 +1151,8 @@ namespace Coprel {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.DataTablePontoFuncionarioRowDeleted != null)) {
-                    this.DataTablePontoFuncionarioRowDeleted(this, new DataTablePontoFuncionarioRowChangeEvent(((DataTablePontoFuncionarioRow)(e.Row)), e.Action));
+                if ((this.DataTablePFRowDeleted != null)) {
+                    this.DataTablePFRowDeleted(this, new DataTablePFRowChangeEvent(((DataTablePFRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1160,14 +1160,14 @@ namespace Coprel {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.DataTablePontoFuncionarioRowDeleting != null)) {
-                    this.DataTablePontoFuncionarioRowDeleting(this, new DataTablePontoFuncionarioRowChangeEvent(((DataTablePontoFuncionarioRow)(e.Row)), e.Action));
+                if ((this.DataTablePFRowDeleting != null)) {
+                    this.DataTablePFRowDeleting(this, new DataTablePFRowChangeEvent(((DataTablePFRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemoveDataTablePontoFuncionarioRow(DataTablePontoFuncionarioRow row) {
+            public void RemoveDataTablePFRow(DataTablePFRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -1194,7 +1194,7 @@ namespace Coprel {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "DataTablePontoFuncionarioDataTable";
+                attribute2.FixedValue = "DataTablePFDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1402,151 +1402,149 @@ namespace Coprel {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class DataTablePontoFuncionarioRow : global::System.Data.DataRow {
+        public partial class DataTablePFRow : global::System.Data.DataRow {
             
-            private DataTablePontoFuncionarioDataTable tableDataTablePontoFuncionario;
+            private DataTablePFDataTable tableDataTablePF;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal DataTablePontoFuncionarioRow(global::System.Data.DataRowBuilder rb) : 
+            internal DataTablePFRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableDataTablePontoFuncionario = ((DataTablePontoFuncionarioDataTable)(this.Table));
+                this.tableDataTablePF = ((DataTablePFDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int Número_de_Registro {
+            public int numRegistro {
                 get {
-                    return ((int)(this[this.tableDataTablePontoFuncionario.Número_de_RegistroColumn]));
+                    return ((int)(this[this.tableDataTablePF.numRegistroColumn]));
                 }
                 set {
-                    this[this.tableDataTablePontoFuncionario.Número_de_RegistroColumn] = value;
+                    this[this.tableDataTablePF.numRegistroColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Nome {
+            public string nome {
                 get {
-                    return ((string)(this[this.tableDataTablePontoFuncionario.NomeColumn]));
+                    return ((string)(this[this.tableDataTablePF.nomeColumn]));
                 }
                 set {
-                    this[this.tableDataTablePontoFuncionario.NomeColumn] = value;
+                    this[this.tableDataTablePF.nomeColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public System.DateTime Entrada_manhã {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tableDataTablePontoFuncionario.Entrada_manhãColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("O valor da coluna \'Entrada manhã\' na tabela \'DataTablePontoFuncionario\' é DBNull." +
-                                "", e);
-                    }
-                }
-                set {
-                    this[this.tableDataTablePontoFuncionario.Entrada_manhãColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public System.DateTime Saída_manhã {
+            public System.DateTime dh_ponto1 {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableDataTablePontoFuncionario.Saída_manhãColumn]));
+                        return ((global::System.DateTime)(this[this.tableDataTablePF.dh_ponto1Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("O valor da coluna \'Saída manhã\' na tabela \'DataTablePontoFuncionario\' é DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'dh_ponto1\' na tabela \'DataTablePF\' é DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDataTablePontoFuncionario.Saída_manhãColumn] = value;
+                    this[this.tableDataTablePF.dh_ponto1Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public System.DateTime Entrada_tarde {
+            public System.DateTime dh_ponto2 {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableDataTablePontoFuncionario.Entrada_tardeColumn]));
+                        return ((global::System.DateTime)(this[this.tableDataTablePF.dh_ponto2Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("O valor da coluna \'Entrada tarde\' na tabela \'DataTablePontoFuncionario\' é DBNull." +
-                                "", e);
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'dh_ponto2\' na tabela \'DataTablePF\' é DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDataTablePontoFuncionario.Entrada_tardeColumn] = value;
+                    this[this.tableDataTablePF.dh_ponto2Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public System.DateTime Saída_tarde {
+            public System.DateTime dh_ponto3 {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableDataTablePontoFuncionario.Saída_tardeColumn]));
+                        return ((global::System.DateTime)(this[this.tableDataTablePF.dh_ponto3Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("O valor da coluna \'Saída tarde\' na tabela \'DataTablePontoFuncionario\' é DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'dh_ponto3\' na tabela \'DataTablePF\' é DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDataTablePontoFuncionario.Saída_tardeColumn] = value;
+                    this[this.tableDataTablePF.dh_ponto3Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsEntrada_manhãNull() {
-                return this.IsNull(this.tableDataTablePontoFuncionario.Entrada_manhãColumn);
+            public System.DateTime dh_ponto4 {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableDataTablePF.dh_ponto4Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'dh_ponto4\' na tabela \'DataTablePF\' é DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTablePF.dh_ponto4Column] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetEntrada_manhãNull() {
-                this[this.tableDataTablePontoFuncionario.Entrada_manhãColumn] = global::System.Convert.DBNull;
+            public bool Isdh_ponto1Null() {
+                return this.IsNull(this.tableDataTablePF.dh_ponto1Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsSaída_manhãNull() {
-                return this.IsNull(this.tableDataTablePontoFuncionario.Saída_manhãColumn);
+            public void Setdh_ponto1Null() {
+                this[this.tableDataTablePF.dh_ponto1Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetSaída_manhãNull() {
-                this[this.tableDataTablePontoFuncionario.Saída_manhãColumn] = global::System.Convert.DBNull;
+            public bool Isdh_ponto2Null() {
+                return this.IsNull(this.tableDataTablePF.dh_ponto2Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsEntrada_tardeNull() {
-                return this.IsNull(this.tableDataTablePontoFuncionario.Entrada_tardeColumn);
+            public void Setdh_ponto2Null() {
+                this[this.tableDataTablePF.dh_ponto2Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetEntrada_tardeNull() {
-                this[this.tableDataTablePontoFuncionario.Entrada_tardeColumn] = global::System.Convert.DBNull;
+            public bool Isdh_ponto3Null() {
+                return this.IsNull(this.tableDataTablePF.dh_ponto3Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsSaída_tardeNull() {
-                return this.IsNull(this.tableDataTablePontoFuncionario.Saída_tardeColumn);
+            public void Setdh_ponto3Null() {
+                this[this.tableDataTablePF.dh_ponto3Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetSaída_tardeNull() {
-                this[this.tableDataTablePontoFuncionario.Saída_tardeColumn] = global::System.Convert.DBNull;
+            public bool Isdh_ponto4Null() {
+                return this.IsNull(this.tableDataTablePF.dh_ponto4Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setdh_ponto4Null() {
+                this[this.tableDataTablePF.dh_ponto4Column] = global::System.Convert.DBNull;
             }
         }
         
@@ -1622,22 +1620,22 @@ namespace Coprel {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class DataTablePontoFuncionarioRowChangeEvent : global::System.EventArgs {
+        public class DataTablePFRowChangeEvent : global::System.EventArgs {
             
-            private DataTablePontoFuncionarioRow eventRow;
+            private DataTablePFRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataTablePontoFuncionarioRowChangeEvent(DataTablePontoFuncionarioRow row, global::System.Data.DataRowAction action) {
+            public DataTablePFRowChangeEvent(DataTablePFRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataTablePontoFuncionarioRow Row {
+            public DataTablePFRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -2120,7 +2118,7 @@ namespace Coprel.bdpontoDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class DataTableTableAdapterPF : global::System.ComponentModel.Component {
+    public partial class PFTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -2134,7 +2132,7 @@ namespace Coprel.bdpontoDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public DataTableTableAdapterPF() {
+        public PFTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -2231,13 +2229,13 @@ namespace Coprel.bdpontoDataSetTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "DataTablePontoFuncionario";
-            tableMapping.ColumnMappings.Add("Número de Registro", "Número de Registro");
-            tableMapping.ColumnMappings.Add("Nome", "Nome");
-            tableMapping.ColumnMappings.Add("Entrada manhã", "Entrada manhã");
-            tableMapping.ColumnMappings.Add("Saída manhã", "Saída manhã");
-            tableMapping.ColumnMappings.Add("Entrada tarde", "Entrada tarde");
-            tableMapping.ColumnMappings.Add("Saída tarde", "Saída tarde");
+            tableMapping.DataSetTable = "DataTablePF";
+            tableMapping.ColumnMappings.Add("numRegistro", "numRegistro");
+            tableMapping.ColumnMappings.Add("nome", "nome");
+            tableMapping.ColumnMappings.Add("dh_ponto1", "dh_ponto1");
+            tableMapping.ColumnMappings.Add("dh_ponto2", "dh_ponto2");
+            tableMapping.ColumnMappings.Add("dh_ponto3", "dh_ponto3");
+            tableMapping.ColumnMappings.Add("dh_ponto4", "dh_ponto4");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -2254,10 +2252,10 @@ namespace Coprel.bdpontoDataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        funcionario.numRegistro AS [Número de Registro], funcionario.nome AS Nome, ponto.dh_ponto1 AS [Entrada manhã], ponto.dh_ponto2 AS [Saída manhã], ponto.dh_ponto3 AS [Entrada tarde], 
-                         ponto.dh_ponto4 AS [Saída tarde]
-FROM            funcionario INNER JOIN
-                         ponto ON funcionario.numRegistro = ponto.numRegistro";
+            this._commandCollection[0].CommandText = "SELECT        funcionario.numRegistro, funcionario.nome, ponto.dh_ponto1, ponto.d" +
+                "h_ponto2, ponto.dh_ponto3, ponto.dh_ponto4\r\nFROM            funcionario INNER JO" +
+                "IN\r\n                         ponto ON funcionario.numRegistro = ponto.numRegistr" +
+                "o";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -2265,7 +2263,7 @@ FROM            funcionario INNER JOIN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int FillPontoFuncionario(bdpontoDataSet.DataTablePontoFuncionarioDataTable dataTable) {
+        public virtual int FillPF(bdpontoDataSet.DataTablePFDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -2278,9 +2276,9 @@ FROM            funcionario INNER JOIN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual bdpontoDataSet.DataTablePontoFuncionarioDataTable GetDataPontoFuncionario() {
+        public virtual bdpontoDataSet.DataTablePFDataTable GetDataPF() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            bdpontoDataSet.DataTablePontoFuncionarioDataTable dataTable = new bdpontoDataSet.DataTablePontoFuncionarioDataTable();
+            bdpontoDataSet.DataTablePFDataTable dataTable = new bdpontoDataSet.DataTablePFDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }

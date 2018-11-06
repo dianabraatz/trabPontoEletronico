@@ -28,6 +28,7 @@ namespace Coprel.View
         private void AdmVisualizarInformacoes_Load(object sender, EventArgs e)
         {
 
+           // this.reportViewer1.RefreshReport();
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -35,6 +36,11 @@ namespace Coprel.View
             EditarFuncionarioView obj = new EditarFuncionarioView(numRegistro);
             obj.Show();
 
+        }
+
+        private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
+        {
+            
         }
     }
 }

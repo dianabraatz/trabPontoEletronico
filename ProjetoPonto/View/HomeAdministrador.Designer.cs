@@ -43,7 +43,7 @@
             this.btnFuncionario.Location = new System.Drawing.Point(12, 16);
             this.btnFuncionario.Name = "btnFuncionario";
             this.btnFuncionario.Size = new System.Drawing.Size(140, 40);
-            this.btnFuncionario.TabIndex = 3;
+            this.btnFuncionario.TabIndex = 1;
             this.btnFuncionario.Text = "Funcionario";
             this.btnFuncionario.UseVisualStyleBackColor = true;
             this.btnFuncionario.Click += new System.EventHandler(this.btnFuncionario_Click);
@@ -54,7 +54,7 @@
             this.btnOcorrencias.Location = new System.Drawing.Point(450, 16);
             this.btnOcorrencias.Name = "btnOcorrencias";
             this.btnOcorrencias.Size = new System.Drawing.Size(140, 40);
-            this.btnOcorrencias.TabIndex = 5;
+            this.btnOcorrencias.TabIndex = 4;
             this.btnOcorrencias.Text = "Ocorrências";
             this.btnOcorrencias.UseVisualStyleBackColor = true;
             this.btnOcorrencias.Click += new System.EventHandler(this.btnOcorrencias_Click);
@@ -65,7 +65,7 @@
             this.btnFuncao.Location = new System.Drawing.Point(304, 16);
             this.btnFuncao.Name = "btnFuncao";
             this.btnFuncao.Size = new System.Drawing.Size(140, 40);
-            this.btnFuncao.TabIndex = 6;
+            this.btnFuncao.TabIndex = 3;
             this.btnFuncao.Text = "Função";
             this.btnFuncao.UseVisualStyleBackColor = true;
             this.btnFuncao.Click += new System.EventHandler(this.btnFuncao_Click);
@@ -76,7 +76,7 @@
             this.btnSetor.Location = new System.Drawing.Point(158, 16);
             this.btnSetor.Name = "btnSetor";
             this.btnSetor.Size = new System.Drawing.Size(140, 40);
-            this.btnSetor.TabIndex = 6;
+            this.btnSetor.TabIndex = 2;
             this.btnSetor.Text = "Setor";
             this.btnSetor.UseVisualStyleBackColor = true;
             this.btnSetor.Click += new System.EventHandler(this.btnSetor_Click);
@@ -87,7 +87,7 @@
             this.btnRelatorio.Location = new System.Drawing.Point(596, 16);
             this.btnRelatorio.Name = "btnRelatorio";
             this.btnRelatorio.Size = new System.Drawing.Size(140, 40);
-            this.btnRelatorio.TabIndex = 7;
+            this.btnRelatorio.TabIndex = 5;
             this.btnRelatorio.Text = "Relatórios";
             this.btnRelatorio.UseVisualStyleBackColor = true;
             this.btnRelatorio.Click += new System.EventHandler(this.btnRelatorio_Click);

@@ -11,15 +11,16 @@ namespace Coprel.DAO
 {
     class OcorrenciaDAO
     {
-        //static string strConnection = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='C:\Users\Charlan\Desktop\bdponto.mdf';Integrated Security=True;Connect Timeout=30";
-        static string strConnection = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='C:\Users\diana\source\repos\bdponto\bdponto.mdf';Integrated Security=True;Connect Timeout=30";
+        static string strConnection = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='C:\Users\Charlan\Desktop\bdponto.mdf';Integrated Security=True;Connect Timeout=30";
+        //static string strConnection = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='C:\Users\diana\source\repos\bdponto\bdponto.mdf';Integrated Security=True;Connect Timeout=30";
         
 
         public DataSet VerificaPontos(int numRegistro)
         {
             //string sql = "select p.codPonto as Código, CONVERT(VARCHAR(10), p.dh_ponto1, 108) as 'Primeiro', CONVERT(VARCHAR(10), p.dh_ponto2, 108) as 'Segundo' ,CONVERT(VARCHAR(10), p.dh_ponto3, 108) as 'Terceiro', CONVERT(VARCHAR(10), p.dh_ponto4, 108) as 'Quarto', CONVERT(date, p.dh_ponto1) as Data from ponto p JOIN funcionario f ON p.numRegistro = f.numRegistro WHERE f.numRegistro = @numRegistro AND (p.dh_ponto1 is null or p.dh_ponto2 is null or p.dh_ponto3 is null or p.dh_ponto4 is null)";
             //string sql = "select p.codPonto as Código, CONVERT(VARCHAR(10), p.dh_ponto1, 108) as 'Primeiro', CONVERT(VARCHAR(10), p.dh_ponto2, 108) as 'Segundo' ,CONVERT(VARCHAR(10), p.dh_ponto3, 108) as 'Terceiro', CONVERT(VARCHAR(10), p.dh_ponto4, 108) as 'Quarto', CONVERT(date, p.dh_ponto1) as Data from ponto p JOIN funcionario f ON p.numRegistro = f.numRegistro WHERE f.numRegistro = @numRegistro AND (p.dh_ponto1 is null or p.dh_ponto2 is null or p.dh_ponto3 is null or p.dh_ponto4 is null)";
-            string sql = "select codPonto as Código, CONVERT(date, dh_ponto1) as 'Data', CONVERT(VARCHAR(10), dh_ponto1, 108) as 'Primeiro', CONVERT(VARCHAR(10), dh_ponto2, 108) as 'Segundo' ,CONVERT(VARCHAR(10), dh_ponto3, 108) as 'Terceiro', CONVERT(VARCHAR(10), dh_ponto4, 108) as 'Quarto' from ponto  WHERE numRegistro = @numRegistro AND (CONVERT(date, dh_ponto1) != CONVERT(date, CURRENT_TIMESTAMP)) AND (dh_ponto1 is null or dh_ponto2 is null or dh_ponto3 is null or dh_ponto4 is null)";
+            string sql = "select codPonto as Código, CONVERT(date, dh_ponto1) as 'Data', CONVERT(VARCHAR(10), dh_ponto1, 108) as 'Primeiro', CONVERT(VARCHAR(10), dh_ponto2, 108) as 'Segundo' ,CONVERT(VARCHAR(10), dh_ponto3, 108) as 'Terceiro', CONVERT(VARCHAR(10), dh_ponto4, 108) as 'Quarto' from ponto JOIN ocorrencia o ON codPonto = o.codPonto WHERE numRegistro = @numRegistro AND (CONVERT(date, dh_ponto1) != CONVERT(date, CURRENT_TIMESTAMP)) AND (dh_ponto1 is null or dh_ponto2 is null or dh_ponto3 is null or dh_ponto4 is null) AND status = 1";
+            //select p.codPonto as Código, o.status, CONVERT(date, p.dh_ponto1) as 'Data', CONVERT(VARCHAR(10), p.dh_ponto1, 108) as 'Primeiro', CONVERT(VARCHAR(10), p.dh_ponto2, 108) as 'Segundo' ,CONVERT(VARCHAR(10), p.dh_ponto3, 108) as 'Terceiro', CONVERT(VARCHAR(10), p.dh_ponto4, 108) as 'Quarto' from ponto p JOIN ocorrencia o ON p.codPonto = o.codPonto WHERE p.numRegistro = @numRegistro AND (CONVERT(date, p.dh_ponto1) != CONVERT(date, CURRENT_TIMESTAMP)) AND (p.dh_ponto1 is null or p.dh_ponto2 is null or p.dh_ponto3 is null or p.dh_ponto4 is null) AND o.status = 1
 
             SqlConnection conn = new SqlConnection(strConnection);
             SqlCommand sqlcmd = new SqlCommand(sql, conn);

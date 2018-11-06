@@ -143,7 +143,7 @@
             this.cbSetor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbSetor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbSetor.FormattingEnabled = true;
-            this.cbSetor.Location = new System.Drawing.Point(287, 403);
+            this.cbSetor.Location = new System.Drawing.Point(286, 403);
             this.cbSetor.Name = "cbSetor";
             this.cbSetor.Size = new System.Drawing.Size(267, 28);
             this.cbSetor.TabIndex = 9;

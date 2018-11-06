@@ -33,8 +33,6 @@ namespace Coprel.Controller
 
         public void CadastraOcorrencia(FunCadastraOcorrencia tela, string justificativa)
         {
-            MessageBox.Show(justificativa);
-
             Ocorrencia o = new Ocorrencia();
             o.SetCodPonto(Convert.ToInt32(tela.tfCod.Text));
             o.SetStatus(Convert.ToInt32(tela.cbStatus.SelectedValue));
@@ -45,7 +43,12 @@ namespace Coprel.Controller
 
             if (rs == 1)
             {
-                MessageBox.Show("Ocorrência cadastrado com sucesso.");
+                DialogResult dr = MessageBox.Show("Ocorrência cadastrado com sucesso.", "Confirma", MessageBoxButtons.OK);
+                if (dr == DialogResult.OK)
+                {
+                    tela.Close();
+                }
+                
             }
             else
                 MessageBox.Show("Houve um erro ao cadastrar a ocorrencia.");

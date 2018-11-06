@@ -30,13 +30,24 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.bdpontoDataSet = new Coprel.bdpontoDataSet();
             this.dataTablePFBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bdpontoDataSet = new Coprel.bdpontoDataSet();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.pFTableAdapter = new Coprel.bdpontoDataSetTableAdapters.PFTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.bdpontoDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTablePFBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdpontoDataSet)).BeginInit();
             this.SuspendLayout();
+            // 
+            // dataTablePFBindingSource
+            // 
+            this.dataTablePFBindingSource.DataMember = "DataTablePF";
+            this.dataTablePFBindingSource.DataSource = this.bdpontoDataSet;
+            // 
+            // bdpontoDataSet
+            // 
+            this.bdpontoDataSet.DataSetName = "bdpontoDataSet";
+            this.bdpontoDataSet.EnforceConstraints = false;
+            this.bdpontoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -48,18 +59,9 @@
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(529, 317);
+            this.reportViewer1.Size = new System.Drawing.Size(628, 407);
             this.reportViewer1.TabIndex = 0;
-            // 
-            // bdpontoDataSet
-            // 
-            this.bdpontoDataSet.DataSetName = "bdpontoDataSet";
-            this.bdpontoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dataTablePFBindingSource
-            // 
-            this.dataTablePFBindingSource.DataMember = "DataTablePF";
-            this.dataTablePFBindingSource.DataSource = this.bdpontoDataSet;
+            this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
             // pFTableAdapter
             // 
@@ -69,13 +71,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(529, 317);
+            this.ClientSize = new System.Drawing.Size(628, 407);
             this.Controls.Add(this.reportViewer1);
             this.Name = "FormRelPontoFuncionario";
             this.Text = "DCPoint - Relatório Ponto/Funcionário";
             this.Load += new System.EventHandler(this.FormRelPontoFuncionario_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.bdpontoDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTablePFBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdpontoDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }

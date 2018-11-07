@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -54,9 +55,12 @@ namespace ProjetoPonto.Model
             this.CNH = value;
         }
 
-        public DateTime GetDataAdmissao()
+        public string GetDataAdmissao()
         {
-            return DataAdmissao;
+            DateTime dt = DateTime.ParseExact(DataAdmissao.ToString(), "dd/MM/yyyy hh:mm:ss", CultureInfo.InvariantCulture);
+            string dataAdm = dt.ToString("dd/M/yyyy", CultureInfo.InvariantCulture);
+
+            return dataAdm;
         }
 
         public void SetDataAdmissao(DateTime value)
@@ -124,9 +128,12 @@ namespace ProjetoPonto.Model
             this.Senha = value;
         }
 
-        public DateTime GetDataNascimento()
+        public string GetDataNascimento()
         {
-            return DataNascimento;
+            DateTime dt = DateTime.ParseExact(DataAdmissao.ToString(), "dd/MM/yyyy hh:mm:ss", CultureInfo.InvariantCulture);
+            string dataNasc = dt.ToString("dd/M/yyyy", CultureInfo.InvariantCulture);
+
+            return dataNasc;
         }
 
         public void SetDataNascimento(DateTime value)

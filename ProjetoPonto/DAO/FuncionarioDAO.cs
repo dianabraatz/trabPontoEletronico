@@ -21,7 +21,6 @@ namespace ProjetoPonto.DAO
             String sql = "SELECT * FROM funcionario WHERE numRegistro=@numRegistro AND senha=@senha;";
             bool result;
 
-            //teste
             SqlConnection conn = new SqlConnection(strConnection);
             SqlCommand sqlcmd = new SqlCommand(sql, conn);
             sqlcmd.Parameters.AddWithValue("@numRegistro", f.GetNumeroRegistro());
@@ -31,8 +30,6 @@ namespace ProjetoPonto.DAO
             {
                 conn.Open();
                 SqlDataReader rows = sqlcmd.ExecuteReader();
-
-                //verifica se possui algum resultado na consulta
                 result = rows.Read();
             }
             catch (Exception)
@@ -101,8 +98,6 @@ namespace ProjetoPonto.DAO
             try
             {
                 conn.Open();
-
-                //verifica se possui algum resultado na consulta
                 result = sqlcmd.ExecuteNonQuery();
             }
             catch (Exception)
@@ -183,7 +178,7 @@ namespace ProjetoPonto.DAO
 
             try
             {
-                conn.Open();    //abre a conexao com o banco
+                conn.Open(); 
                 adapter.Fill(dataSet);
             }
             catch (Exception)
@@ -284,8 +279,6 @@ namespace ProjetoPonto.DAO
             {
                 conn.Open();
                 SqlDataReader rows = sqlcmd.ExecuteReader();
-
-                //verifica se possui algum resultado na consulta
                 result = rows.Read();
 
             }
@@ -321,8 +314,6 @@ namespace ProjetoPonto.DAO
             try
             {
                 conn.Open();
-
-                //verifica se possui algum resultado na consulta
                 result = sqlcmd.ExecuteNonQuery();
             }
             catch (Exception e)
@@ -393,7 +384,7 @@ namespace ProjetoPonto.DAO
 
             try
             {
-                conn.Open();    //abre a conexao com o banco
+                conn.Open();  
                 adapter.Fill(dataSet);
             }
             catch (Exception)
@@ -405,6 +396,32 @@ namespace ProjetoPonto.DAO
                 conn.Close();
             }
             return dataSet;
+        }
+
+        public int AlteraSenha(Funcionario f)
+        {
+            string sql = "UPDATE funcionario SET senha = @senha WHERE numRegistro = @numRegistro;";
+            int result = 0;
+
+            SqlConnection conn = new SqlConnection(strConnection);
+            SqlCommand sqlcmd = new SqlCommand(sql, conn);
+            sqlcmd.Parameters.AddWithValue("@numRegistro", f.GetNumeroRegistro());
+            sqlcmd.Parameters.AddWithValue("@senha", f.GetSenha());
+
+            try
+            {
+                conn.Open();
+                result = sqlcmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("" + e.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return result;
         }
     }
 }

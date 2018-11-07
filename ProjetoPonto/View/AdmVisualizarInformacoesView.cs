@@ -42,5 +42,11 @@ namespace Coprel.View
         {
             
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            AdmAlteraSenhaView obj = new AdmAlteraSenhaView(numRegistro);
+            obj.Show();
+        }
     }
 }

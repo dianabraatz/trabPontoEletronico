@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -52,9 +53,12 @@ namespace Coprel.View
                 if (tabela.Rows[linha].DataBoundItem != null) //verifica se a linha da tabela está vazia
                 {
                     DataRowView dr = (DataRowView)tabela.Rows[linha].DataBoundItem;
-                    label6.Text = Convert.ToString(dr["Data"].ToString());
                     label7.Text = Convert.ToString(dr["Justificativa"].ToString());
                     label5.Text = Convert.ToString(dr["Nome do Funcionário"].ToString());
+
+                    DateTime dt = DateTime.ParseExact(dr["Data"].ToString(), "dd/MM/yyyy hh:mm:ss", CultureInfo.InvariantCulture);
+                    label6.Text = dt.ToString("dd/M/yyyy", CultureInfo.InvariantCulture);
+
                     codigoOcorrencia = Convert.ToInt32(dr["Código da Ocorrencia"].ToString());
 
                     btnJustificar.Enabled = true;

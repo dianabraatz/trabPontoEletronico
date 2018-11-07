@@ -92,6 +92,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>bdpontoDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Controller\AdmAlterarSenhaController.cs" />
     <Compile Include="Controller\AdmVisualizarInformacoesController.cs" />
     <Compile Include="Controller\AdmVisualizarOcorrenciaController.cs" />
     <Compile Include="Controller\EditarFuncionarioController.cs" />
@@ -148,6 +149,12 @@
     </Compile>
     <Compile Include="View\EditarFuncionarioView.Designer.cs">
       <DependentUpon>EditarFuncionarioView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AdmAlteraSenhaView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AdmAlteraSenhaView.Designer.cs">
+      <DependentUpon>AdmAlteraSenhaView.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FunCadastraOcorrencia.cs">
       <SubType>Form</SubType>
@@ -223,6 +230,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\EditarFuncionarioView.resx">
       <DependentUpon>EditarFuncionarioView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AdmAlteraSenhaView.resx">
+      <DependentUpon>AdmAlteraSenhaView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FunCadastraOcorrencia.resx">
       <DependentUpon>FunCadastraOcorrencia.cs</DependentUpon>

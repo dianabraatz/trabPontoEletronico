@@ -37,7 +37,6 @@
             this.btnFiltrar = new System.Windows.Forms.Button();
             this.tfBuscar = new System.Windows.Forms.TextBox();
             this.cbFiltro = new System.Windows.Forms.ComboBox();
-            this.btnEditar = new System.Windows.Forms.Button();
             this.btnCadastrarFuncionario = new System.Windows.Forms.Button();
             this.btnVisualizar = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
@@ -48,7 +47,7 @@
             // btnExcluir
             // 
             this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcluir.Location = new System.Drawing.Point(779, 599);
+            this.btnExcluir.Location = new System.Drawing.Point(932, 599);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(147, 37);
             this.btnExcluir.TabIndex = 12;
@@ -141,17 +140,6 @@
             this.cbFiltro.TabIndex = 17;
             this.cbFiltro.SelectedIndexChanged += new System.EventHandler(this.cbFiltro_SelectedIndexChanged);
             // 
-            // btnEditar
-            // 
-            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Location = new System.Drawing.Point(932, 599);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(147, 37);
-            this.btnEditar.TabIndex = 16;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.UseVisualStyleBackColor = true;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
             // btnCadastrarFuncionario
             // 
             this.btnCadastrarFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -208,7 +196,6 @@
             this.Controls.Add(this.btnFiltrar);
             this.Controls.Add(this.tfBuscar);
             this.Controls.Add(this.cbFiltro);
-            this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnCadastrarFuncionario);
             this.Controls.Add(this.btnVisualizar);
             this.Name = "VisualizarFuncionarioView";
@@ -226,7 +213,6 @@
         public System.Windows.Forms.DataGridView tabela;
         public System.Windows.Forms.TextBox tfBuscar;
         public System.Windows.Forms.ComboBox cbFiltro;
-        public System.Windows.Forms.Button btnEditar;
         public System.Windows.Forms.Button btnCadastrarFuncionario;
         public System.Windows.Forms.Button btnVisualizar;
         public System.Windows.Forms.Button btnCancela;
